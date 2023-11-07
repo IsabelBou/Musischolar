@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import ContentBlock from './components/ContentBlock';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         >
           Learn React
         </a>
+        <ContentBlock title="title" description="description" verovio="verovio"></ContentBlock>
+        <ContentBlock title="title2" description="description2" verovio="verovio2"></ContentBlock>
       </header>
     </div>
   );
