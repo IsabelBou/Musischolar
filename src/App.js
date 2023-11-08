@@ -1,27 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
 import ContentBlock from './components/ContentBlock';
+import Toggle from './components/Toggle';
+import { extendTheme, ChakraProvider } from '@chakra-ui/react'
+
+const colors = {
+  brand: {
+    900: '#1a365d',
+    800: '#153e75',
+    700: '#2a69ac',
+  },
+}
+
+const theme = extendTheme({ colors })
 
 function App() {
   return (
-    <div className="App">
+    <ChakraProvider theme={theme}>
+      <div className="App">
+        <Toggle />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <ContentBlock title="title" description="description" verovio="verovio"></ContentBlock>
-        <ContentBlock title="title2" description="description2" verovio="verovio2"></ContentBlock>
       </header>
+      <ContentBlock title="title" description="description" verovio="verovio"></ContentBlock>
+      <ContentBlock title="title2" description="description2" verovio="verovio2"></ContentBlock>
     </div>
+    </ChakraProvider>
   );
 }
 
