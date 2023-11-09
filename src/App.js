@@ -1,15 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import { ChakraProvider } from '@chakra-ui/react'
-import ContentBlock from './components/ContentBlock';
-import Toggle from './components/Toggle';
-import theme from './themes/theme';
-import CustomCard from './components/CustomCard';
+import ContentBlock from './ContentBlock';
+import Toggle from './themes/components/ModeToggle';
+import customTheme from './themes/index';
+import CustomCard from './themes/components/CustomCard';
 
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={customTheme}>
       <div className="App">
         <Toggle />
       <header className="App-header">
