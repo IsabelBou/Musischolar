@@ -1,18 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import { ChakraProvider } from '@chakra-ui/react'
 import ContentBlock from './components/ContentBlock';
 import Toggle from './components/Toggle';
-import { extendTheme, ChakraProvider } from '@chakra-ui/react'
+import theme from './themes/theme';
+import CustomCard from './components/CustomCard';
 
-const colors = {
-  brand: {
-    900: '#1a365d',
-    800: '#153e75',
-    700: '#2a69ac',
-  },
-}
-
-const theme = extendTheme({ colors })
 
 function App() {
   return (
@@ -23,7 +16,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
       </header>
       <ContentBlock title="title" description="description" verovio="verovio"></ContentBlock>
-      <ContentBlock title="title2" description="description2" verovio="verovio2"></ContentBlock>
+      <CustomCard />
     </div>
     </ChakraProvider>
   );
