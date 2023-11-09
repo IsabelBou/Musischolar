@@ -10,7 +10,7 @@ const Toggle = () => {
   return (
     <div>
       <Stack align='center' direction='row' spacing='1rem'>
-        <Switch onChange={() => toggleColorMode()} colorScheme='purple' size='sm' />
+        <Switch onChange={() => toggleColorMode()} colorScheme='primary' size='sm' />
       </Stack>
       <Button
         aria-label="Toggle Color Mode"
