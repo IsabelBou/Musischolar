@@ -1,5 +1,3 @@
-import React from "react";
-
 import {useColorMode, Switch, Button, Stack } from "@chakra-ui/react";
 import { PiSunDuotone, PiMoonStarsDuotone } from 'react-icons/pi'
 

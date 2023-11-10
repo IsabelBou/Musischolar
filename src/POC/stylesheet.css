@@ -1,0 +1,34 @@
+g{
+    color: blueviolet;
+}
+
+g.note.playing {
+    filter: drop-shadow(0 0 2rem crimson);
+    transition: 0.2s ease-in-out;
+}
+
+@keyframes fade {
+    50% { opacity: 1; }
+  }
+
+/*Lemma or base text variation*/
+g.lem {
+    fill: black;
+}
+
+/*Secondary reading within textual variation*/
+g.rdg {
+    fill: green;
+}
+
+g.note:hover {
+    animation-name: pulse;
+    animation-duration: 1.0s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+    0%   { fill: orange; }
+    50%  { fill: yellow; }
+    100% { fill: orange; }
+}
