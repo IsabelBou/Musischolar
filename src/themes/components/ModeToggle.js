@@ -1,7 +1,6 @@
 import React from "react";
 
 import {useColorMode, Switch, Button, Stack } from "@chakra-ui/react";
-/* import { BsSun, BsMoonStarsFill } from 'react-icons/bs' */
 import { PiSunDuotone, PiMoonStarsDuotone } from 'react-icons/pi'
 
 const Toggle = () => {
@@ -17,7 +16,6 @@ const Toggle = () => {
         onClick={toggleColorMode}
         _focus={{ boxShadow: 'none' }}
         w="fit-content">
-        {/* {colorMode === 'light' ? <BsMoonStarsFill /> : <BsSun />} */}
         {colorMode === 'light' ? <PiMoonStarsDuotone /> : <PiSunDuotone />}
       </Button>
     </div>
