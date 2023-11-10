@@ -1,4 +1,4 @@
-import { Box, Card, CardBody, CardHeader, Heading } from '@chakra-ui/react';
+import { Box, Card, CardBody, CardHeader } from '@chakra-ui/react';
 import { AccordionButton, AccordionIcon, AccordionPanel, AccordionItem, Accordion } from '@chakra-ui/react';
 
 
