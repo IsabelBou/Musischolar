@@ -5,7 +5,6 @@ import customTheme from './themes/index';
 import CustomCard from './themes/components/CustomCard';
 
 function App() {
-
   return (
     <ChakraProvider theme={customTheme}>
     <div className="App">
