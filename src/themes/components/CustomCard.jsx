@@ -2,7 +2,8 @@ import { Box, Card, CardBody, CardHeader } from '@chakra-ui/react';
 import { AccordionButton, AccordionIcon, AccordionPanel, AccordionItem, Accordion } from '@chakra-ui/react';
 import VerovioRenderer from './Verovio';
 
-const customCard = () => {
+const customCard = (props) => {
+    const {url} = props;
     return (
         <Card>
             <CardHeader>
@@ -21,7 +22,7 @@ const customCard = () => {
                 </Accordion>
             </CardHeader>
             <CardBody>
-                <VerovioRenderer/>
+                <VerovioRenderer url = { url }/>
             </CardBody>
         </Card>
     )

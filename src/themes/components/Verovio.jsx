@@ -5,14 +5,15 @@ import { useState, useEffect } from "react";
 //wait for Verovio Module to load
 const VerovioModule = await createVerovioModule();
 
-const VerovioRenderer = () => {
+const VerovioRenderer = (props) => {
+    const {url} = props;
     //dynamically changes score
     const [score, setScore] = useState();
 
     useEffect(() => {
         //gets MEI score from URL and saves it as plain text
         async function retrieveScore() {
-            const score = await fetch("https://raw.githubusercontent.com/IsabelBou/MeiTestFiles/main/DoM.mei")
+            const score = await fetch ( url )
                 .then((response) => response.text());
             setScore(score);
         }
@@ -23,8 +24,6 @@ const VerovioRenderer = () => {
         verovioToolkit.setOptions({
             justifyVertically: true,
             svgViewBox: true,
-            scaleToPageSize: true,
-            transpose: 'P1',
         });
         //loads previously saved MEI score as text
         verovioToolkit.loadData(score);
