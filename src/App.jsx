@@ -7,12 +7,12 @@ import { scores } from './resources/constants';
 
 function App() {
   return (
-    <ChakraProvider theme={customTheme}>
-    <div className="App">
-      <Toggle />
-    <CustomCard url = { scores.JONICO } />
-  </div>
-  </ChakraProvider>
+    <ChakraProvider theme={customTheme} >
+      <div className="App">
+        <Toggle />
+        <CustomCard url = { scores.JONICO } />
+      </div>
+    </ChakraProvider>
   )
 }
 

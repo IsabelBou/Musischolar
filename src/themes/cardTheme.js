@@ -7,13 +7,14 @@ const { definePartsStyle, defineMultiStyleConfig } =
 
 const baseStyle = definePartsStyle({
   header: {
-    paddingBottom: '1rem',
+    paddingBottom: '0.5rem',
   },
   body: {
-    paddingTop: '1rem',
+    paddingTop: '0.25rem',
+    paddingBottom: '1rem'
   },
   footer: {
-    paddingTop: '1rem',
+    paddingTop: '0.5rem',
   },
 })
 
