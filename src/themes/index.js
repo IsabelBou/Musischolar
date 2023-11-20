@@ -5,7 +5,8 @@ import { cardAccordion } from './cardAccordion'
 
 const customTheme = extendTheme(
   {
-      colors: themeColors,
+    body: { minHeight: "100vh" },
+    colors: themeColors,
       fonts: {
           body: "Verdana, sans-serif",
           heading: "Georgia, serif",

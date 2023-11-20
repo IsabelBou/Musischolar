@@ -5,7 +5,7 @@ import VerovioRenderer from './Verovio';
 const customCard = (props) => {
     const {url} = props;
     return (
-        <Card>
+        <Card minW='md'>
             <CardHeader>
                 <Accordion allowToggle allowMultiple>
                     <AccordionItem border='none'> {/*TODO: Figure out how to add border: none to the theme's AccordionItem*/}                    

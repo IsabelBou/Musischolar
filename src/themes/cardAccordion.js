@@ -11,7 +11,8 @@ const baseStyle = definePartsStyle({
     fontSize: '1.5rem',
   },
   panel: {
-    fontSize: '1rem',
+    paddingBottom: '0.25rem',
+    fontSize: '0.75rem',
   },
   /*item: {
     border: 'none',

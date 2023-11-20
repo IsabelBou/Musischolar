@@ -20,10 +20,21 @@ const VerovioRenderer = (props) => {
         retrieveScore();
     })
         const verovioToolkit = new VerovioToolkit(VerovioModule);
-        //Options: https://book.verovio.org/toolkit-reference/toolkit-options.html
+        //Full option list: https://book.verovio.org/toolkit-reference/toolkit-options.html
         verovioToolkit.setOptions({
             justifyVertically: true,
+            //SVG size will be equal to filled score (will not render empty spaces)
+            adjustPageWidth: true,
+            adjustPageHeight: true,
+            //remove margins from rendered SVG
+            pageMarginTop: 0,
+            pageMarginBottom: 0,
+            pageMarginLeft: 0,
+            pageMarginRight: 0,
+            //scale down to fit containers/embed in divs
             svgViewBox: true,
+            //Numbers for semitone transposition, [P/m/d/dd/M/A/AA]Number for intervals, A1 for sharp of current, [A-G]#/b for specific key to closest tonic. Mode is unaltered
+            transpose: "P1", 
         });
         //loads previously saved MEI score as text
         verovioToolkit.loadData(score);
