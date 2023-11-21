@@ -34,7 +34,8 @@ const VerovioRenderer = (props) => {
             //scale down to fit containers/embed in divs
             svgViewBox: true,
             //Numbers for semitone transposition, [P/m/d/dd/M/A/AA]Number for intervals, A1 for sharp of current, [A-G]#/b for specific key to closest tonic. Mode is unaltered
-            transpose: "P1", 
+            transpose: "P1",
+            //TODO: parameterize transpose according to Tone Selector
         });
         //loads previously saved MEI score as text
         verovioToolkit.loadData(score);
