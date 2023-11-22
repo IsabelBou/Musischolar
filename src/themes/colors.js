@@ -133,5 +133,13 @@ export const themeColors = {
       "700": "#571fea",
       "800": "#4817cc",
       "900": "#351196"
+    },
+    //For upcoming visual improvement on mode toggler
+    "sunset": {
+      "100": "#030033",
+      "250": "#611b87",
+      "500": "#5570cc",
+      "750": "#5abaf0",
+      "900": "#fff8e9",
     }
   }
