@@ -7,7 +7,7 @@ import Header from './themes/components/Header'
 import { scores } from './resources/constants';
 
 function App() {
-  return (
+  return ( //resetCSS={false} inside provider solves blank bottom issue
     <ChakraProvider theme={customTheme} >
       <div className="App">
         <Header />

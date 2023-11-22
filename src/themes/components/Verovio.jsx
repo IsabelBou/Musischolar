@@ -1,4 +1,4 @@
-import createVerovioModule from 'verovio/wasm';
+import createVerovioModule from 'verovio/wasm'; //'verovio/wasm-hum' for humdrum support
 import { VerovioToolkit } from 'verovio/esm';
 import { useState, useEffect } from "react";
 
