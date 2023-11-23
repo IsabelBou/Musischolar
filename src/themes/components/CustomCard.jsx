@@ -4,26 +4,26 @@ import VerovioRenderer from './Verovio';
 import PlayPauseToggle from './PlayPauseToggle';
 
 const customCard = (props) => {
-    const {url} = props;
+    const { title, description, score } = props;
     return (
         <Card minW='md'>
             <CardHeader>
                 <Accordion allowToggle allowMultiple>
-                    <AccordionItem border='none'> {/*TODO: Figure out how to add border: none to the theme's AccordionItem*/}                    
+                    <AccordionItem border='none'> {/*//TODO: Figure out how to add border: none to the theme's AccordionItem*/}                    
                         <AccordionButton >
                             <Box flex='1' textAlign='center'>
-                                Title
+                                {title}
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
                         <AccordionPanel>
-                            More Information
+                            {description}
                         </AccordionPanel>
                     </AccordionItem>
                 </Accordion>
             </CardHeader>
             <CardBody>
-                <VerovioRenderer url = { url }/>
+                <VerovioRenderer url = { score }/>
                 <PlayPauseToggle />
             </CardBody>
         </Card>

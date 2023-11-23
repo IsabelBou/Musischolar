@@ -4,14 +4,14 @@ import { ChakraProvider } from '@chakra-ui/react'
 import customTheme from './themes/index';
 import CustomCard from './themes/components/CustomCard';
 import Header from './themes/components/Header'
-import { scores } from './resources/constants';
+import { cards } from './resources/constants';
 
 function App() {
   return ( //resetCSS={false} inside provider solves blank bottom issue
     <ChakraProvider theme={customTheme} >
       <div className="App">
         <Header />
-        <CustomCard url = { scores.JONICO } />
+        <CustomCard {...cards.TEMPLATE}/>
       </div>
     </ChakraProvider>
   )
