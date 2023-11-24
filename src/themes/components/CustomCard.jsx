@@ -1,7 +1,6 @@
 import { Box, Card, CardBody, CardHeader } from '@chakra-ui/react';
 import { AccordionButton, AccordionIcon, AccordionPanel, AccordionItem, Accordion } from '@chakra-ui/react';
-import VerovioRenderer from './Verovio';
-import PlayPauseToggle from './PlayPauseToggle';
+import Player from './MidiPlayer';
 
 const customCard = (props) => {
     const { title, description, score } = props;
@@ -23,8 +22,7 @@ const customCard = (props) => {
                 </Accordion>
             </CardHeader>
             <CardBody>
-                <VerovioRenderer url = { score }/>
-                <PlayPauseToggle />
+                <Player score = { score }/>
             </CardBody>
         </Card>
     )
