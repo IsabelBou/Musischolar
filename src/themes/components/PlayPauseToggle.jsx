@@ -1,18 +1,16 @@
-import { useState } from 'react';
 import { Button } from "@chakra-ui/react";
 import { PiPauseDuotone, PiPlayDuotone } from 'react-icons/pi'
 
-const PlayPauseToggle = () => {
-    const [playing, setStatus] = useState(false);
-
+const PlayPauseToggle = (props) => {
+    const {onClick, isPlaying} = props;
     return (
         <div>
             <Button
-            aria-label="Toggle Color Mode"
-            onClick={() => setStatus(!playing)}
+            onClick={onClick}
+            aria-label="Toggle Play or Pause"
             _focus={{ boxShadow: 'none' }}
             w="fit-content">
-            { playing ? <PiPauseDuotone/> : <PiPlayDuotone/> }
+            { isPlaying ? <PiPauseDuotone/> : <PiPlayDuotone/> }
             </Button>
         </div>
     );
