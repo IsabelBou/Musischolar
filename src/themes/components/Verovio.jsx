@@ -35,7 +35,7 @@ const VerovioRenderer = (props) => {
             //scale down to fit containers/embed in divs
             svgViewBox: true,
             //Numbers for semitone transposition, [P/m/d/dd/M/A/AA]Number for intervals, A1 for sharp of current, [A-G]#/b for specific key to closest tonic. Mode is unaltered. See https://book.verovio.org/advanced-topics/transposition.html
-            transpose: "P5",
+            transpose: "P1",
             //TODO: parameterize transpose according to Tone Selector
         });
         //loads previously saved MEI score as text
@@ -43,12 +43,11 @@ const VerovioRenderer = (props) => {
         const scoreSVG = verovioToolkit.renderToSVG(1, {});
         
         //TODO: get MIDI file and lift to player
-        
+  
         // Get the MIDI file from the Verovio toolkit
         let base64midi = verovioToolkit.renderToMIDI();
         // Add the data URL prefixes describing the content
         let midiString = 'data:audio/midi;base64,' + base64midi;
-        //setMIDIString('data:audio/midi;base64,' + base64midi);
         setMidi(midiString);
 
         //returns HTML in a div, otherwise SVG will be shown as text in page
