@@ -6,7 +6,7 @@ import Header from './themes/components/Header'
 import { cards } from './resources/constants';
 
 function App() {
-  return ( //TODO: resetCSS={false} inside provider solves blank bottom issue
+  return ( //TresetCSS={false} inside provider solves blank bottom issue
     <ChakraProvider theme={customTheme} >
       <div className="App">
         <Header />
