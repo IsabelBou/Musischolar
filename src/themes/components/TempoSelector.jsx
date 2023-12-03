@@ -2,7 +2,7 @@ import { Button } from "@chakra-ui/react";
 import { PiMetronomeDuotone } from "react-icons/pi";
 
 const TempoSelector = () => {
-//TODO: slider for Tempo adjustment linked to midi playback
+//TODO: Slider for Tempo adjustment linked to midi playback
     return (
         <div>
             <Button 

@@ -38,7 +38,7 @@ ReactJS app meant to store interactive conservatory notes using Chakra-UI.
 The music sheets are rendered into SVG with Verovio using custom MEI files (XML-based music encoding).
 Verovio is also capable of producing MIDI files that will be played using JZZ.js MIDI library.
 <br />
-<p align="center"><b>This is still a work in process.</b></p>
+<p align="center"><b>This is still a work in progress.</b></p>
 
 
 ### Built With
@@ -60,20 +60,21 @@ Verovio is also capable of producing MIDI files that will be played using JZZ.js
   - [x] Render MEI files into SVG using Verovio
   - [x] Create basic components for music SVG and relevant information display
   - [x] Render MEI files into MIDI
-  - [ ] Play MIDI files using jzz.js library
+  - [x] Play MIDI files using jzz.js library
   - [ ] Visualize MIDI playing on sheet
 - [ ] User Preferences
   - [x] Create global Dark/Light mode toggle
   - [ ] Create global tempo selector as slider
   - [ ] Create global tonality selector as wheel menu
 - [ ] Content
-  - [ ]  Structure studyable conservatory content
-  - [ ]  Encode MEI files for every topic to be covered
-    - [ ]  Add context-relevant tags for dynamic modification
-
+  - [ ] Structure studyable conservatory content
+  - [ ] Encode MEI files for every topic to be covered
+  - [ ] Add context-relevant tags to MEI files for dynamic modification
 - [ ] Quality
-  - [ ]  Grant responsiveness
-  - [ ] Grant accessibility
+  - [ ] Grant responsiveness
+  - [ ] Verify accessibility
+- [ ] Hosting
+  - [ ] Set up GitHub Pages
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -81,8 +82,8 @@ Verovio is also capable of producing MIDI files that will be played using JZZ.js
 ### See Also
 <a name="see-also"></a>
 
-* [MEI](https://github.com/music-encoding) - Music Encoding Initiative
-* [MEI file repository](https://github.com/IsabelBou/MeiTestFiles) - Custom MEI files used in the app.
+* [MEI](https://github.com/music-encoding) - About the Music Encoding Initiative
+* [MEI project file repository](https://github.com/IsabelBou/MeiTestFiles) - Custom MEI files used in the app.
 * [W3C Quick reference](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1) - Web Content Accessibility Guidelines (WCAG)
 * [JZZ.js](https://jazz-soft.net/doc/JZZ/) - Javascript MIDI library
 
