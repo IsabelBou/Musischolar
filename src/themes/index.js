@@ -2,6 +2,8 @@ import { extendTheme, withDefaultColorScheme } from '@chakra-ui/react'
 import { themeColors } from './colors'
 import { cardTheme } from './cardTheme'
 import { cardAccordion } from './cardAccordion'
+import { tooltipTheme } from './TooltipTheme'
+
 
 const customTheme = extendTheme(
   {
@@ -19,6 +21,7 @@ const customTheme = extendTheme(
       components: {
         Card: cardTheme,
         Accordion: cardAccordion,
+        Tooltip: tooltipTheme,
       },
   },
   withDefaultColorScheme({ colorScheme: 'primary' }),

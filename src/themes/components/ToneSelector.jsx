@@ -1,4 +1,4 @@
-import { Button } from "@chakra-ui/react";
+import { Button, Tooltip } from "@chakra-ui/react";
 //import VerovioRenderer from "./Verovio";
 //import { scores } from '/src/resources/constants';
 import { GiGClef } from "react-icons/gi"; //Temporary icon
@@ -10,12 +10,14 @@ const ToneSelector = () => {
 
   return (
     <div>
-            <Button 
-            aria-label="Adjust Tempo" 
-            _focus={{ boxShadow: 'none' }} 
-            w="fit-content">
-                <GiGClef />
-            </Button>
+      <Tooltip label='Select Tonality Pitch' hasArrow closeDelay={200} placement='bottom'>
+        <Button 
+              aria-label="Select Tonality Pitch" 
+              _focus={{ boxShadow: 'none' }} 
+              w="fit-content">
+                  <GiGClef />
+              </Button>
+      </Tooltip>
     </div>
     //TODO: Figure out why SVG is not being rendered correctly inside button; might have to do with dimensions
   );

@@ -123,8 +123,12 @@ export const themeColors = {
       "900": "#0c346f"
     },
     "primary": {
-      "50": "#f8f6fe",
+      "50":  "#f8f6fe",
+      "65":  "#F3EFFD",
+      "75":  "#EDE8FD",
+      "85":  "#E9E3FD",
       "100": "#e4dcfc",
+      "150": "#D9CDFB",
       "200": "#cdbdf9",
       "300": "#b197f5",
       "400": "#a081f3",
