@@ -5,10 +5,10 @@ import Player from './MidiPlayer';
 const customCard = (props) => {
     const { title, description, score } = props;
     return (
-        <Card minW='md'>
+        <Card>
             <CardHeader>
                 <Accordion allowToggle allowMultiple>
-                    <AccordionItem border='none'> {/*//TODO: Figure out how to add border: none to the theme's AccordionItem*/}                    
+                    <AccordionItem border='none'>                  
                         <AccordionButton >
                             <Box flex='1' textAlign='center'>
                                 {title}

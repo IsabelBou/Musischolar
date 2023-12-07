@@ -11,7 +11,6 @@ const baseStyle = definePartsStyle({
     paddingBottom: '0.5rem',
   },
   body: {
-    //minHeight: '100vh', solves blank bottom issue, but extends card
     paddingTop: '0.25rem',
     paddingBottom: '1rem'
   },
