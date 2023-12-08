@@ -15,8 +15,6 @@ function App() {
           <Card> Test </Card>
           <br></br>
           <SimpleGrid 
-            flexShrink={0}
-            align = 'stretch'
             spacing = {4} 
             columns={{base: 1, sm: 1, md: 2}}> {/* If screen about the size of a phone (portrait), 1 column. Otherwise, 2 of them*/}
             <CustomCard {...cards.TEMPLATE}/>
