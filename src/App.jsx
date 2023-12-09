@@ -8,8 +8,8 @@ import { cards } from './resources/constants';
 
 function App() {
   return (
-    <ChakraProvider theme={customTheme} >
-      <Container minHeight="100vh" width="100vw"> 
+    <ChakraProvider theme = {customTheme} >
+      <Container minHeight = "100vh" width = "100vw"> 
           <Header />
           <br></br>
           <Card> Test </Card>

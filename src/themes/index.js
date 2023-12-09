@@ -5,6 +5,7 @@ import { cardTheme } from './cardTheme'
 import { cardAccordion } from './cardAccordion'
 import { tooltipTheme } from './TooltipTheme'
 
+// TODO: Create button theme to unify shape and reduced passed props (increase readability)
 
 const customTheme = extendTheme(
   {
