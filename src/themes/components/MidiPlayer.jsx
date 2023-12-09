@@ -22,7 +22,7 @@ async function loadFile(midi, midiout, setIsPlaying) {
 
 const Player = (props) => {
     // Score is URL with MEI file, passed to VerovioRenderer
-    const { score } = props;
+    const { score, modeColor } = props;
     // Used to sync Play/Pause toggler state with MIDI's
     const [isPlaying, setIsPlaying] = useState(false);
     // MIDI is generated inside VerovioRenderer from passed score and then lifted here
@@ -61,8 +61,8 @@ const Player = (props) => {
 
     return(
         <div>
-            <VerovioRenderer url = { score } setMidi = {setMidi} /> {/*Receives score URL (MEI file), processes it and sends back MIDI base64 string */}
-            <PlayPauseToggle onClick={() => setIsPlaying(!isPlaying)} isPlaying={isPlaying}/>
+            <VerovioRenderer url = { score } setMidi = { setMidi } color = { modeColor }/>  {/*Receives score URL (MEI file), processes it and sends back MIDI base64 string */}
+            <PlayPauseToggle onClick = {() => setIsPlaying(!isPlaying)} isPlaying = { isPlaying }/>
         </div>
     )
 }

@@ -33,6 +33,10 @@ const Toggle = () => {
   };
 
   // TODO: Find a way to animate from hovered initial state to unhovered next state (without scroll effect and without initial unhovered state)
+    //Alternative: Create script that will remove hover effect upon click
+
+
+  //TODO: Find out if tooltip can stay after mode change (currently swaps and disappears soon afterwards, only reappears when no longer focusing button and then hovering again)
 
   return (
     <div>

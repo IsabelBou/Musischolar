@@ -129,11 +129,13 @@ export const themeColors = {
       "85":  "#E9E3FD",
       "100": '#d2bff6',
       "200": '#b096ea',
+      "280": '#A285E5',
       "300": '#8e6ce0',
       "400": '#6842d6',
       "500": '#4a29bd',
       "600": '#402094',
       "700": '#34166b',
+      "780": '#230E47',
       "800": '#230d42',
       "900": '#0f041c',
       "950": '#120B21', //#121212 (recommended dark theme surface color) blended with #4526b1 overlay
