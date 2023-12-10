@@ -41,30 +41,30 @@ const Toggle = () => {
   return (
     <div>
     <Tooltip label = {`Toggle to ${colorMode === "light" ? "Dark" : "Light"} Mode`}>
-      <Box as='button'
-          p = {3}
-          fontSize='20'
-          text-align = 'center'
-          display = 'flex'
-          alignContent = 'center'
-          justifyContent= 'flex-center'
-          aria-label="Toggle Color Mode"
-          onClick={toggleColorMode}
-          boxShadow= 'none'
-          transition= '0.8s '
-          // Full "sky" gradient, with all four modes
-          bgGradient = { `linear(to-b, ${CYCLE})` }
-          backgroundSize = "auto 400%"          
-          /* --- COLOR CHANGING UPON MODE TOGGLE --- */
-          _hover = {{
-              transition: '0.7s',
-              ease: "easeInOut",
-              _dark: { backgroundPosition: POS.sunrise },
-              _light: { backgroundPosition: POS.sunset },
-            }}
-          _dark = {{ backgroundPosition: POS.night }}
-          _light = {{ backgroundPosition: POS.day  }}
-          >
+      <Box as = 'button' aria-label = "Toggle Color Mode"
+        onClick={toggleColorMode}
+        /* Formatting similar to sq sized button */
+        p = {3}
+        fontSize = '22'
+        text-align = 'center'
+        display = 'flex'
+        alignContent = 'center'
+        justifyContent = 'flex-center'
+        boxShadow = 'none'
+        // Full "sky" gradient, with all four modes
+        bgGradient = { `linear(to-b, ${CYCLE})` }
+        backgroundSize = "auto 400%"
+        /* --- COLOR CHANGING UPON MODE TOGGLE --- */
+        transition= '0.8s '
+        _hover = {{
+          transition: '0.7s',
+            ease: "easeInOut",
+            _dark: { backgroundPosition: POS.sunrise },
+            _light: { backgroundPosition: POS.sunset },
+          }}
+        _dark = {{ backgroundPosition: POS.night }}
+        _light = {{ backgroundPosition: POS.day  }}
+        >
           {colorMode === 'light' 
             ? <PiSunDuotone color = "#FFFFA3"/> 
             : <PiMoonStarsDuotone color = "white" />}

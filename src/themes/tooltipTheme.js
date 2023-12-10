@@ -22,6 +22,8 @@ const tooltipColors = {
 Tooltip.defaultProps = 
     {...Tooltip.defaultProps,
         hasArrow: true,
+        closeDelay: '300',
+        placement: 'bottom',
     }
 
 export const tooltipTheme = defineStyleConfig({

@@ -10,16 +10,13 @@ const ToneSelector = () => {
 
   return (
     <div>
-      <Tooltip label='Select Tonality Pitch' hasArrow closeDelay={200} placement='bottom'>
-        <Button 
-              aria-label="Select Tonality Pitch" 
-              _focus={{ boxShadow: 'none' }} 
-              w="fit-content">
-                  <GiGClef />
-              </Button>
+      <Tooltip label = 'Select Tonality Pitch' >
+        <Button aria-label = "Select Tonality Pitch" >
+          <GiGClef />
+        </Button>
       </Tooltip>
     </div>
-    //TODO: Figure out why SVG is not being rendered correctly inside button; might have to do with dimensions
+    //TODO: Figure out why SVG is not being rendered correctly inside button; might have to do with dimensions or button padding
   );
 };
 
