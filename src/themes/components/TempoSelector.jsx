@@ -5,11 +5,8 @@ const TempoSelector = () => {
 //TODO: Slider for Tempo adjustment linked to midi playback
     return (
         <div>
-            <Tooltip hasArrow closeDelay={200} label='Change Tempo' placement='bottom'>
-                <Button 
-                aria-label="Adjust Tempo" 
-                _focus={{ boxShadow: 'none' }} 
-                w="fit-content">
+            <Tooltip label = 'Change Tempo' >
+                <Button aria-label = "Adjust Tempo" >
                     <PiMetronomeDuotone />
                 </Button>
             </Tooltip>
