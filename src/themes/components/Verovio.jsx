@@ -1,16 +1,17 @@
 import createVerovioModule from 'verovio/wasm'; //'verovio/wasm-hum' for humdrum support
 import { VerovioToolkit } from 'verovio/esm';
 import { useState, useEffect } from "react";
+import { useColorModeValue } from '@chakra-ui/react';
 
 // TODO: Adjust tempo based on TempoSelector slider by modifying markup in MEI. Also learn how its tagging works.
-
-// TODO: Get color mode data and change rendered sheet based on that, specially for dark mode. 
 
 
 // wait for Verovio Module to load
 const VerovioModule = await createVerovioModule();
 
 const VerovioRenderer = (props) => {
+    // Sets SVG color based on mode
+    const color = useColorModeValue('#120B21', '#F3EFFD'); //(light mode, dark mode)
     const {url, setMidi} = props;
     // dynamically changes score
     const [score, setScore] = useState();
@@ -38,6 +39,8 @@ const VerovioRenderer = (props) => {
             pageMarginRight: 0,
             // scale down to fit containers/embed in divs
             svgViewBox: true,
+            // adds CSS as string with  added to SVG output
+            svgCss: `.definition-scale { color: ${color}; fill: ${color} };`,
             // Numbers for semitone transposition, [P/m/d/dd/M/A/AA]Number for intervals, A1 for sharp of current, [A-G]#/b for specific key to closest tonic. Mode is unaltered. See https://book.verovio.org/advanced-topics/transposition.html
             transpose: "P1",
             // TODO: Parameterize transpose according to Tone Selector
