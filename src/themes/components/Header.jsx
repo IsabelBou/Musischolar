@@ -4,7 +4,7 @@ import  Toggle  from './ModeToggle'
 import ToneSelector from './ToneSelector'
 import TempoSelector from './TempoSelector'
 
-//TODO: Fix header to absolute top (Or side) of viewport.
+//IMPROVE: Fix header to absolute top (Or side) of viewport.
     //position="fixed" top='0' left='0' got something similar to what I was looking for.
 
 

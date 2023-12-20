@@ -46,7 +46,7 @@ const Player = (props) => {
                 const player = await loadFile(midi, midioutRef.current, setIsPlaying);
                 setPlayer(player);
             }
-            // TODO: Clean buffered MIDI upon MIDI/Player change; currently, changed MIDI will overlap with previous playing one until onEnd(), and next playblack will be doubled.
+            // IMPROVE: Clean buffered MIDI upon MIDI/Player change; currently, changed MIDI will overlap with previous playing one until onEnd(), and next playblack will be doubled.
         }
         createPlayer();
     }, [midi, midioutRef, setIsPlaying]);

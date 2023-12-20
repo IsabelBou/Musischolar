@@ -3,8 +3,11 @@ import { VerovioToolkit } from 'verovio/esm';
 import { useState, useEffect } from "react";
 import { useColorModeValue } from '@chakra-ui/react';
 
-// TODO: Adjust tempo based on TempoSelector slider by modifying markup in MEI. Also learn how its tagging works.
+// TODO: Adjust tempo based on TempoSelector slider by modifying markup in MEI. See: https://book.verovio.org/toolkit-reference/toolkit-methods.html#edit
 
+// TODO: Refactor options to improve code readability
+
+// TODO: Create context with common parameters (for now, tempo and tonality) specified at header
 
 // wait for Verovio Module to load
 const VerovioModule = await createVerovioModule();
