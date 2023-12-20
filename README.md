@@ -67,11 +67,14 @@ Verovio is also capable of producing MIDI files that are played using JZZ.js MID
 - [ ] User Preferences
   - [x] Create global Dark/Light mode toggle
   - [ ] Create global tempo selector as slider
-  - [ ] Create global tonality selector as wheel menu
+  - [ ] Create global tonality selector (ideally as wheel menu)
+- [ ] Navigation
+  - [ ] Create App Shell
+  - [ ] Implement React Router
 - [ ] Content
-  - [ ] Structure studyable conservatory content
+  - [ ] Structure studyable conservatory content for routing
   - [ ] Encode MEI files for every topic to be covered
-  - [ ] Add context-relevant tags to MEI files for dynamic modification
+  - [x] Add context-relevant tags to MEI files for dynamic modification
 - [ ] Quality
   - [ ] Grant responsiveness
   - [ ] Verify accessibility
@@ -84,8 +87,8 @@ Verovio is also capable of producing MIDI files that are played using JZZ.js MID
 ### See Also
 <a name="see-also"></a>
 
-* [MEI](https://github.com/music-encoding) - About the Music Encoding Initiative
-* [MEI project file repository](https://github.com/IsabelBou/MeiTestFiles) - Custom MEI files used in the app.
+* [Music Encoding Initiative (MEI)](https://github.com/music-encoding) - About the Music Encoding Initiative
+* [MEI project file repository](https://github.com/IsabelBou/MusischolarMeiFiles) - Custom MEI files used in the app.
 * [W3C Quick reference](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1) - Web Content Accessibility Guidelines (WCAG)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
