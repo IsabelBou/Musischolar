@@ -1,7 +1,9 @@
 import { Button, Tooltip } from "@chakra-ui/react";
 import { GrMenu } from "react-icons/gr";
 
-const MenuButton = () => {
+const MenuButton = (props) => {
+
+    const { onOpen } = props;
 
     return (
         <div>
@@ -9,7 +11,9 @@ const MenuButton = () => {
                 <Button
                     // Visible on mobile and tablets, disappears on wide screen
                     display = {{ base: "flex", md: "none" }}
-                    aria-label = "open menu" alt = "menu" > 
+                    aria-label = "open menu" alt = "menu" 
+                    // Triggers sidebar drawer from AppShell
+                    onClick = { onOpen } >
                     <GrMenu />
                 </Button>
             </Tooltip>
