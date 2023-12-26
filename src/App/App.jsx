@@ -5,7 +5,7 @@ import AppShell from '../components/AppShell/AppShell';
 
 function App() {
   return (
-    <ChakraProvider theme = {customTheme} >
+    <ChakraProvider theme = {customTheme} cssVarsRoot = '#app' >
       <AppShell/>
     </ChakraProvider>
   )
