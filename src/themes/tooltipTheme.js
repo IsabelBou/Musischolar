@@ -22,7 +22,7 @@ const tooltipColors = {
 Tooltip.defaultProps = 
     {...Tooltip.defaultProps,
         hasArrow: true,
-        closeDelay: '300',
+        closeDelay: '100',
         placement: 'bottom',
     }
 

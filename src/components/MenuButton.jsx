@@ -10,7 +10,7 @@ const MenuButton = (props) => {
             <Tooltip label = 'Open Menu' >
                 <Button
                     // Visible on mobile and tablets, disappears on wide screen
-                    display = {{ base: "flex", md: "none" }}
+                    display = {{ base: "flex", lg: "none" }}
                     aria-label = "open menu" alt = "menu" 
                     // Triggers sidebar drawer from AppShell
                     onClick = { onOpen } >
