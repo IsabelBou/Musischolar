@@ -5,11 +5,6 @@ import ToneSelector from '../ToneSelector'
 import TempoSelector from '../TempoSelector'
 import MenuButton from '../MenuButton'
 
-
-// IMPROVE: Fix header to absolute top of viewport.
-    // position="fixed" top='0' left='0' got something similar to what I was looking for.
-
-
 const Header = (props) => {
     const { onOpen } = props; // Clicking the Menu Button triggers sidebar drawer on above component
 

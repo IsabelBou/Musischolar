@@ -3,8 +3,12 @@ import { mode } from "@chakra-ui/theme-tools"
 import { themeColors } from './colors'
 import { cardTheme } from './cardTheme'
 import { cardAccordion } from './cardAccordion'
-import { tooltipTheme } from './TooltipTheme'
+import { tooltipTheme } from './tooltipTheme'
 import { buttonTheme } from './buttonTheme'
+
+// TODO: Change background color for sidebar, modal and pop-up
+
+// TODO: Customize scrollbars
 
 const customTheme = extendTheme(
   {
