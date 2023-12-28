@@ -69,7 +69,7 @@ Verovio is also capable of producing MIDI files that are played using JZZ.js MID
   - [ ] Create global tempo selector as slider
   - [ ] Create global tonality selector
 - [ ] Navigation
-  - [x] Create App Shell
+  - [x] Responsive App Shell
   - [ ] Implement React Router
 - [ ] Content
   - [ ] Structure studyable conservatory content for routing
@@ -85,6 +85,7 @@ Verovio is also capable of producing MIDI files that are played using JZZ.js MID
 * Low Priority features and Enhancements:
   - Match mouse coordinates and note id (for on-demand midi playback repositioning or highlighting)
   - Tonality selector as wheel menu ([fifths circle](https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Circle_of_fifths_deluxe_4.svg/1024px-Circle_of_fifths_deluxe_4.svg.png))
+  - AppShell fixed footer as piano keyboard, showing played notes acording to MIDI.
   - Sinusoidal chart with [note frequencies](https://upload.wikimedia.org/wikipedia/commons/a/ad/Piano_key_frequencies.png) in Harmony class' notes
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
