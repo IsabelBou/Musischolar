@@ -1,6 +1,6 @@
 import { SimpleGrid, Card, Box } from '@chakra-ui/react'
-import CustomCard from '../CustomCard';
-import { cards } from '../../resources/constants';
+import CustomCard from '../components/CustomCard';
+import { cards } from '../resources/constants';
 
 function TestContent() {
     return (
