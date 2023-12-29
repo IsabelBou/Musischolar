@@ -2,8 +2,8 @@ import { Box, Flex } from '@chakra-ui/react'
 import { useDisclosure, Drawer, DrawerContent, DrawerOverlay } from '@chakra-ui/react';
 import Sidebar from './Sidebar';
 import Header from './Header'
-import TestContent from './TestContent';
-
+import TestContent from '../../routes/TestContent';
+import { Outlet } from 'react-router-dom';
 
 function AppShell() {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -33,6 +33,7 @@ function AppShell() {
                     </Box>
                     <Box flex="1" h="full" overflowY="auto" p={4}>
                         <TestContent />
+                        <Outlet />
                     </Box>
                 </Flex>
             </Flex>
