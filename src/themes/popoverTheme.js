@@ -21,18 +21,17 @@ const { definePartsStyle, defineMultiStyleConfig } =
     createMultiStyleConfigHelpers(parts.keys)
 
 const baseStyle = definePartsStyle({
-  // define the part you're going to style
     content: {
-    _light:{
-        bg: popoverColors.light,
-        color: 'white',
-        [$arrowBg.variable]: 'colors.' + popoverColors.light,
-    },
-    _dark:{
-        bg: popoverColors.dark,
-        color: 'black',
-        [$arrowBg.variable]: 'colors.' + popoverColors.dark,
-    }
+        _light:{
+            bg: popoverColors.light,
+            color: 'white',
+            [$arrowBg.variable]: 'colors.' + popoverColors.light,
+        },
+        _dark:{
+            bg: popoverColors.dark,
+            color: 'black',
+            [$arrowBg.variable]: 'colors.' + popoverColors.dark,
+        }
     },
 })
 

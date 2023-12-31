@@ -6,6 +6,7 @@ import { cardAccordion } from './cardAccordion'
 import { tooltipTheme } from './tooltipTheme'
 import { buttonTheme } from './buttonTheme'
 import { popoverTheme } from './popoverTheme'
+import { drawerTheme } from './drawerTheme'
 
 // TODO: Change background color for sidebar, modal and pop-up
 
@@ -38,6 +39,7 @@ const customTheme = extendTheme(
         Tooltip: tooltipTheme,
         Button: buttonTheme,
         Popover: popoverTheme,
+        Drawer: drawerTheme,
       },
   },
   withDefaultColorScheme({ colorScheme: 'primary' }),
