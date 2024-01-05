@@ -2,7 +2,7 @@ import { Box, Flex } from '@chakra-ui/react'
 import { useDisclosure, Drawer, DrawerContent, DrawerOverlay } from '@chakra-ui/react';
 import Sidebar from './Sidebar';
 import Header from './Header'
-import TestContent from '../../routes/TestContent';
+//import TestContent from '../../pages/TestContent';
 import { Outlet } from 'react-router-dom';
 
 function AppShell() {
@@ -32,7 +32,6 @@ function AppShell() {
                     </Drawer>
                     </Box>
                     <Box flex="1" h="full" overflowY="auto" p={4}>
-                        <TestContent />
                         <Outlet />
                     </Box>
                 </Flex>

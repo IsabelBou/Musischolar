@@ -8,7 +8,7 @@ import { buttonTheme } from './buttonTheme'
 import { popoverTheme } from './popoverTheme'
 import { drawerTheme } from './drawerTheme'
 
-// TODO: Change background color for sidebar, modal and pop-up
+// TODO: Change background color for modal
 
 // TODO: Customize scrollbars
 
