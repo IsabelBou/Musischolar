@@ -4,6 +4,7 @@ import {
     Flex,
     Text,
 } from "@chakra-ui/react";
+import Nav from "./Nav";
 
 const Sidebar = (props) => {
     const { onClose } = props;
@@ -23,7 +24,7 @@ const Sidebar = (props) => {
                 <CloseButton display = {{ base: "flex", lg: "none" }} 
                     onClick = { onClose } />
             </Flex>
-            <Text align="center">Item</Text>
+            <Nav />
         </Box>
     );
 };

@@ -1,12 +1,13 @@
 import './App.css';
 import { ChakraProvider } from '@chakra-ui/react'
 import customTheme from '../themes/index';
-import AppShell from '../components/AppShell/AppShell';
+import { RouterProvider } from "react-router-dom";
+import router from '../components/router/Router';
 
 function App() {
   return (
     <ChakraProvider theme = {customTheme} cssVarsRoot = '#app' >
-      <AppShell/>
+      <RouterProvider router = {router} />
     </ChakraProvider>
   )
 }
