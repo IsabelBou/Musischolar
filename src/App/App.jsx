@@ -6,8 +6,8 @@ import router from '../components/router/Router';
 
 function App() {
   return (
-    <ChakraProvider theme = {customTheme} cssVarsRoot = '#app' >
-      <RouterProvider router = {router} />
+    <ChakraProvider theme = { customTheme } cssVarsRoot = '#app' >
+      <RouterProvider router = { router } />
     </ChakraProvider>
   )
 }
