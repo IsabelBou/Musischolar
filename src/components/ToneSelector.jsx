@@ -1,11 +1,9 @@
 import { Button, Tooltip } from "@chakra-ui/react";
 import { GiGClef } from "react-icons/gi";
 //import ToneWheel from "./ToneWheel";
-import { Modal, ModalOverlay, ModalContent, ModalHeader,
-  ModalBody,
-  ModalCloseButton,
-  useDisclosure
-} from '@chakra-ui/react'
+import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, useDisclosure } from '@chakra-ui/react'
+import ToneSlider from "./ToneSlider";
+
 
 //TODO: Generate MEI file for tone selection. See: https://book.verovio.org/advanced-topics/transposition.html#transposition-by-tonic-pitch
 
@@ -29,9 +27,12 @@ const ToneSelector = () => {
         size = 'sm' isCentered >
         <ModalOverlay backdropFilter='auto' backdropBlur='1.5px' backdropSaturate='50%'/>
         <ModalContent>
-          <ModalHeader>Tone Selection Wheel</ModalHeader>
+          <ModalHeader>Key Signature Selection</ModalHeader>
           <ModalCloseButton />
-          <ModalBody> Coming soon! </ModalBody>
+          <ModalBody textAlign = 'center'>
+            Slide to change Key Signatures
+            <ToneSlider/>
+          </ModalBody>
         </ModalContent>
       </Modal>
     </div>
