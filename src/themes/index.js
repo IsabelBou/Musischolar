@@ -7,6 +7,7 @@ import { tooltipTheme } from './tooltipTheme'
 import { buttonTheme } from './buttonTheme'
 import { popoverTheme } from './popoverTheme'
 import { drawerTheme } from './drawerTheme'
+import { sliderTheme } from './sliderTheme'
 
 // TODO: Change background color for modal
 
@@ -40,6 +41,7 @@ const customTheme = extendTheme(
         Button: buttonTheme,
         Popover: popoverTheme,
         Drawer: drawerTheme,
+        Slider: sliderTheme,
       },
   },
   withDefaultColorScheme({ colorScheme: 'primary' }),
