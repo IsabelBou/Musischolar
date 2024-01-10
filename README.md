@@ -67,7 +67,7 @@ Verovio is also capable of producing MIDI files that are played using JZZ.js MID
 - [ ] User Preferences
   - [x] Create global Dark/Light mode toggle
   - [ ] Create global tempo selector as slider
-  - [ ] Create global tonality selector
+  - [x] Create global tonality selector
 - [x] Navigation
   - [x] Responsive App Shell
   - [x] Implement React Router
@@ -76,7 +76,7 @@ Verovio is also capable of producing MIDI files that are played using JZZ.js MID
   - [ ] Encode MEI files for every topic to be covered
   - [x] Add context-relevant tags to MEI files for dynamic modification
 - [ ] Quality
-  - [ ] Grant responsiveness
+  - [x] Grant responsiveness
   - [ ] Verify accessibility
 - [ ] Hosting
   - [ ] Set up GitHub Pages
