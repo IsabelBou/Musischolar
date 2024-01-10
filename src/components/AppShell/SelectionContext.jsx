@@ -4,4 +4,7 @@ import { createContext } from 'react';
 export const TempoContext = createContext(1);
 
 // [Modified at ToneSelector] Key signature of choice, later mapped against KEY constant for verovio parameters
-export const KeyContext = createContext(0);
+export const KeyContext = createContext({
+    key: 0,
+    setKey: () => {}
+});

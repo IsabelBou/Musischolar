@@ -3,6 +3,7 @@ import { VerovioToolkit } from 'verovio/esm';
 import { useState, useEffect, useContext } from "react";
 import { useColorModeValue } from '@chakra-ui/react';
 import { TempoContext, KeyContext } from './AppShell/SelectionContext';
+//import { KEY } from '../resources/constants';
 
 // TODO: Adjust tempo based on TempoSelector slider by modifying markup in MEI. See: https://book.verovio.org/toolkit-reference/toolkit-methods.html#edit
 
@@ -13,7 +14,7 @@ const VerovioModule = await createVerovioModule();
 
 const VerovioRenderer = (props) => {
     const tempoModifier = useContext(TempoContext);
-    const keySignature = useContext(KeyContext);
+    const { key } = useContext(KeyContext);
     // Sets SVG color based on mode
     const color = useColorModeValue('#120B21', '#F3EFFD'); //(light mode, dark mode)
     const {url, setMidi} = props;
@@ -63,7 +64,7 @@ const VerovioRenderer = (props) => {
     setMidi(midiString);
 
     console.log(tempoModifier);
-    console.log(keySignature);
+    console.log(key);
 
     // returns HTML in a div, otherwise SVG will be shown as text in page
     return (
