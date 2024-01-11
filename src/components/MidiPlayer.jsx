@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useLayoutEffect } from 'react';
 import PlayPauseToggle from './PlayPauseToggle';
 import VerovioRenderer from './Verovio';
 import { JZZ } from 'jzz';
@@ -25,6 +25,8 @@ const Player = (props) => {
     const { score } = props;
     // Used to sync Play/Pause toggler state with MIDI's
     const [isPlaying, setIsPlaying] = useState(false);
+    // Current position in the MIDI (milliseconds)
+    const [ms, setMS] = useState(0);
     // MIDI is generated inside VerovioRenderer from passed score and then lifted here
     const [midi, setMidi] = useState();
     // Ensure only once player instance is being used
@@ -59,9 +61,16 @@ const Player = (props) => {
         }
     }, [player, isPlaying])
 
+    useLayoutEffect(() => {
+        if (player) {
+            setMS(player.positionMS());
+            console.log('ms: ', ms);
+        }
+    }, [player, isPlaying, setMS, ms])
+
     return(
         <div>
-            <VerovioRenderer url = { score } setMidi = { setMidi }/>  {/*Receives score URL (MEI file), processes it and sends back MIDI base64 string */}
+            <VerovioRenderer url = { score } setMidi = { setMidi } ms = { ms } />  {/*Receives score URL (MEI file), processes it and sends back MIDI base64 string */}
             <PlayPauseToggle onClick = {() => setIsPlaying(!isPlaying)} isPlaying = { isPlaying }/>
         </div>
     )
