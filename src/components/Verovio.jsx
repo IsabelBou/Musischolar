@@ -11,13 +11,14 @@ import { TempoContext, KeyContext } from './AppShell/SelectionContext';
 
 // wait for Verovio Module to load
 const VerovioModule = await createVerovioModule();
+const verovioToolkit = new VerovioToolkit(VerovioModule);
 
 const VerovioRenderer = (props) => {
     const tempoModifier = useContext(TempoContext);
     const { key } = useContext(KeyContext);
     // Sets SVG color based on mode
     const color = useColorModeValue('#120B21', '#F3EFFD'); //(light mode, dark mode)
-    const {url, setMidi} = props;
+    const { url, setMidi, ms } = props;
     // dynamically changes score
     const [score, setScore] = useState();
 
@@ -29,9 +30,9 @@ const VerovioRenderer = (props) => {
             setScore(score);
         }
         retrieveScore();
-    })
+    }, [url]) //run only if URL changes 
 
-    const verovioToolkit = new VerovioToolkit(VerovioModule);
+    
     // Full option list: https://book.verovio.org/toolkit-reference/toolkit-options.html
     verovioToolkit.setOptions({
         justifyVertically: true,
@@ -55,7 +56,22 @@ const VerovioRenderer = (props) => {
     verovioToolkit.loadData(score);
     const scoreSVG = verovioToolkit.renderToSVG(1, {});
 
-    // TODO: highlight currently playing notes 
+    // TODO: highlight currently playing notes
+
+    useEffect(() => {
+        // Remove attribute 'playing' of all previously 'playing' notes
+        let playingNotes = document.querySelectorAll('.note.playing');
+        for (let playingNote of playingNotes) playingNote.classList.remove("playing");
+        // Gets list of notes being played in the MIDI at a given time in milliseconds
+        let currentElements = verovioToolkit.getElementsAtTime(ms);
+        // Get all notes currently playing and set as class 'playing' for styling
+        if (currentElements.notes) {
+            for (let note of currentElements.notes) {
+                let noteElement = document.getElementById(note);
+                if (noteElement) noteElement.classList.add("playing");
+            }
+        }
+    }, [ms]);
 
     // Get the MIDI file from the Verovio toolkit
     let base64midi = verovioToolkit.renderToMIDI();
@@ -65,6 +81,7 @@ const VerovioRenderer = (props) => {
 
     console.log(tempoModifier);
     console.log(key);
+    console.log(ms);
 
     // returns HTML in a div, otherwise SVG will be shown as text in page
     return (

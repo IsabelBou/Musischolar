@@ -18,8 +18,13 @@ const customTheme = extendTheme(
     styles: {
       global: (props) => ({
         "html, body": {
-          background: mode("primary.50", "primary.950")(props),  //light and dark mode colors, respectively
+          background: mode("primary.50", "primary.950")(props), //light and dark mode colors, respectively
         },
+        "svg": {
+          '.playing': {
+              fill: mode("primary.500", "primary.200")(props),
+          }
+        }
       }),
     },
     colors: themeColors,
