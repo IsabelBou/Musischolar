@@ -5,6 +5,8 @@ import { JZZ } from 'jzz';
 import { SMF } from 'jzz-midi-smf';
 import { Tiny } from 'jzz-synth-tiny';
 
+import { Text } from '@chakra-ui/react';
+
 // OPTIMIZE: Reduce load time of midi in web
 
 // Prepares MIDI file to be played
@@ -63,14 +65,18 @@ const Player = (props) => {
 
     useLayoutEffect(() => {
         if (player) {
-            setMS(player.positionMS());
-            console.log('ms: ', ms);
+            const interval = setInterval(() => {
+                let currentMS = (player.positionMS())
+                setMS(currentMS);
+            }, 10);
+            return () => clearInterval(interval);
         }
-    }, [player, isPlaying, setMS, ms])
+    })
 
     return(
         <div>
             <VerovioRenderer url = { score } setMidi = { setMidi } ms = { ms } />  {/*Receives score URL (MEI file), processes it and sends back MIDI base64 string */}
+            <Text>{ms}</Text>
             <PlayPauseToggle onClick = {() => setIsPlaying(!isPlaying)} isPlaying = { isPlaying }/>
         </div>
     )

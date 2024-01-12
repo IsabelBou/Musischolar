@@ -13,6 +13,8 @@ import { TempoContext, KeyContext } from './AppShell/SelectionContext';
 const VerovioModule = await createVerovioModule();
 const verovioToolkit = new VerovioToolkit(VerovioModule);
 
+
+//OPTIMIZE: Memoize values that are unnecessarily recalculated every re-render
 const VerovioRenderer = (props) => {
     const tempoModifier = useContext(TempoContext);
     const { key } = useContext(KeyContext);
@@ -32,7 +34,6 @@ const VerovioRenderer = (props) => {
         retrieveScore();
     }, [url]) //run only if URL changes 
 
-    
     // Full option list: https://book.verovio.org/toolkit-reference/toolkit-options.html
     verovioToolkit.setOptions({
         justifyVertically: true,
@@ -56,8 +57,13 @@ const VerovioRenderer = (props) => {
     verovioToolkit.loadData(score);
     const scoreSVG = verovioToolkit.renderToSVG(1, {});
 
-    // TODO: highlight currently playing notes
+    // Get the MIDI file from the Verovio toolkit
+    let base64midi = verovioToolkit.renderToMIDI();
+    // Add the data URL prefixes describing the content
+    let midiString = base64midi;
+    setMidi(midiString);
 
+    // Highlight currently playing notes
     useEffect(() => {
         // Remove attribute 'playing' of all previously 'playing' notes
         let playingNotes = document.querySelectorAll('.note.playing');
@@ -72,12 +78,6 @@ const VerovioRenderer = (props) => {
             }
         }
     }, [ms]);
-
-    // Get the MIDI file from the Verovio toolkit
-    let base64midi = verovioToolkit.renderToMIDI();
-    // Add the data URL prefixes describing the content
-    let midiString = base64midi;
-    setMidi(midiString);
 
     console.log(tempoModifier);
     console.log(key);
