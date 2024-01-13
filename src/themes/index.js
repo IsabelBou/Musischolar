@@ -14,32 +14,37 @@ import { sliderTheme } from './sliderTheme'
 // TODO: Customize scrollbars
 
 const customTheme = extendTheme(
-  {
+{
     styles: {
-      global: (props) => ({
-        "html, body": {
-          background: mode("primary.50", "primary.950")(props), //light and dark mode colors, respectively
-        },
-        "svg": {
-          '.playing': {
-              fill: mode("primary.500", "primary.200")(props),
-          }
-        }
-      }),
+        global: (props) => ({
+            "html, body": {
+                background: mode("primary.50", "primary.950")(props), //light and dark mode colors, respectively
+            },
+            "svg": {
+                '.definition-scale': {
+                    color: mode("primary.950", "primary.65")(props),
+                    fill: mode("primary.950", "primary.65")(props),
+                },
+                '.playing': { // TODO: Change playing color; check contrast
+                    color: mode("primary.500", "primary.200")(props),
+                    fill: mode("primary.500", "primary.200")(props),
+                }
+            }
+        }),
     },
     colors: themeColors,
-      fonts: {
-          body: "Verdana, sans-serif",
-          heading: "Georgia, serif",
-          mono: "Menlo, monospace",
-          /*  TODO: Check accessibility of text:
-          - space between each sentence to 1.5 line-height of your type
-          - Within paragraphs, the spacing should be at least 1.5 times larger than the line spacing
-          - Under most circumstances, line spacing should not exceed 2.0
-          - spacing between paragraphs should not exceed 2.0 times larger than the line spacing
-          */
-      },
-      components: {
+    fonts: {
+        body: "Verdana, sans-serif",
+        heading: "Georgia, serif",
+        mono: "Menlo, monospace",
+        /*  TODO: Check accessibility of text:
+        - space between each sentence to 1.5 line-height of your type
+        - Within paragraphs, the spacing should be at least 1.5 times larger than the line spacing
+        - Under most circumstances, line spacing should not exceed 2.0
+        - spacing between paragraphs should not exceed 2.0 times larger than the line spacing
+        */
+    },
+    components: {
         Card: cardTheme,
         Accordion: cardAccordion,
         Tooltip: tooltipTheme,
@@ -47,14 +52,14 @@ const customTheme = extendTheme(
         Popover: popoverTheme,
         Drawer: drawerTheme,
         Slider: sliderTheme,
-      },
-  },
-  withDefaultColorScheme({ colorScheme: 'primary' }),
-  {
-    config: {
-      disableTransitionOnChange: false
     },
-  }
+},
+    withDefaultColorScheme({ colorScheme: 'primary' }),
+    {
+        config: {
+            disableTransitionOnChange: false
+        },
+    }
 )
 
 export default customTheme
