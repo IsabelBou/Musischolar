@@ -1,13 +1,11 @@
 import { useState, useEffect, useRef, useLayoutEffect } from 'react';
 import PlayPauseToggle from './PlayPauseToggle';
-import VerovioRenderer from './Verovio';
+import VerovioRenderer from './Verovio/Verovio';
 import { JZZ } from 'jzz';
 import { SMF } from 'jzz-midi-smf';
 import { Tiny } from 'jzz-synth-tiny';
 
-import { Text } from '@chakra-ui/react';
-
-// OPTIMIZE: Reduce load time of midi in web
+// OPTIMIZE: Reduce load time of midi in web and disable play button in the meantime 
 
 // Prepares MIDI file to be played
 async function loadFile(midi, midiout, setIsPlaying) {
@@ -63,6 +61,7 @@ const Player = (props) => {
         }
     }, [player, isPlaying])
 
+    // IMPROVE: Remove flickering; learn about animation frame requests
     useLayoutEffect(() => {
         if (player) {
             const interval = setInterval(() => {
@@ -76,7 +75,6 @@ const Player = (props) => {
     return(
         <div>
             <VerovioRenderer url = { score } setMidi = { setMidi } ms = { ms } />  {/*Receives score URL (MEI file), processes it and sends back MIDI base64 string */}
-            <Text>{ms}</Text>
             <PlayPauseToggle onClick = {() => setIsPlaying(!isPlaying)} isPlaying = { isPlaying }/>
         </div>
     )
