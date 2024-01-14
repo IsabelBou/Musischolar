@@ -1,18 +1,16 @@
-import { Link as ReactRouterLink } from 'react-router-dom'
-import { Link as ChakraLink } from '@chakra-ui/react'
-
-// TODO: Parameterize, similar to router, for scalability purposes.
-
-// TODO: Style links
+import { ROUTES } from '../router/RouterConfig';
+import NavItem from "./NavItem";
 
 function Nav() {
+    const NavItems = ROUTES.map(({ path, title }) => { console.log(path, title)
+        return <NavItem key = { title } path = { `${ path }` } title = { title }/>; 
+    });
+
     return (
         <nav>
-            <ChakraLink as = { ReactRouterLink } to = '/'> TestHome </ChakraLink>
-            <ChakraLink as = { ReactRouterLink } to = '/test'> TestContent </ChakraLink>
-            <ChakraLink as = { ReactRouterLink } to = '/error'> TestError </ChakraLink>
+            <NavItem path = '/' title = 'testHome'/>
+            { NavItems }
         </nav>
     );
 }
-
 export default Nav
