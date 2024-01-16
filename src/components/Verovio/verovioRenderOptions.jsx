@@ -1,10 +1,6 @@
-//import { KeyContext } from './AppShell/SelectionContext';
-//import { KEY } from '../resources/constants';
-
 // TODO: Parameterize constructor
 
 export default function verovioRenderOptions () {
-    //const { key } = useContext(KeyContext);
 
     return {
     // Full option list: https://book.verovio.org/toolkit-reference/toolkit-options.html

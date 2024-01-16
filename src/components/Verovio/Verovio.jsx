@@ -2,6 +2,8 @@ import createVerovioModule from 'verovio/wasm'; //'verovio/wasm-hum' for humdrum
 import { VerovioToolkit } from 'verovio/esm';
 import { useState, useEffect, useContext } from "react";
 import { TempoContext } from '../AppShell/SelectionContext';
+import { KeyContext } from '../AppShell/SelectionContext';
+import { KEY } from '../../resources/constants';
 import verovioRenderOptions from './verovioRenderOptions';
 
 // TODO: Adjust tempo based on TempoSelector slider by modifying markup in MEI. See: https://book.verovio.org/toolkit-reference/toolkit-methods.html#edit
@@ -16,7 +18,8 @@ const verovioToolkit = new VerovioToolkit(VerovioModule);
 
 const VerovioRenderer = (props) => {
 
-    const tempoModifier = useContext(TempoContext);
+    const { tempo } = useContext(TempoContext);
+    const { key } = useContext(KeyContext);
     const { url, setMidi, ms } = props;
     const [score, setScore] = useState();
 
@@ -58,8 +61,10 @@ const VerovioRenderer = (props) => {
         }
     }, [ms]);
 
-    console.log(tempoModifier);
-    console.log(ms);
+    console.log("tempo: ", tempo);
+    console.log("current ms: ", ms);
+    console.log("key context: ", key)
+    console.log("Traspose command: ", KEY[key].trasposevrv)
 
     // returns HTML in a div, otherwise SVG will be shown as text in page
     return (

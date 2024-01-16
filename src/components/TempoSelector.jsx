@@ -2,10 +2,9 @@ import { Button, Tooltip} from "@chakra-ui/react";
 import { PiMetronomeDuotone } from "react-icons/pi";
 import { Popover, PopoverTrigger, PopoverContent, PopoverHeader, PopoverArrow, PopoverBody } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react" //Needed for Popover workaround
+import TempoSlider from "./TempoSlider";
 
 const TempoSelector = () => {
-
-//TODO: Slider for Tempo adjustment linked to midi playback
 
     return (
         <div>
@@ -23,7 +22,7 @@ const TempoSelector = () => {
                     <PopoverHeader> Choose your tempo </PopoverHeader>
                     <PopoverArrow />
                     <PopoverBody>
-                        Slider will go here
+                        <TempoSlider />
                     </PopoverBody>
                 </PopoverContent>
             </Popover>
