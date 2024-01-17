@@ -7,7 +7,7 @@ const customCard = (props) => {
     return (
         <Card>
             <CardHeader>
-                <Accordion allowToggle allowMultiple>
+                <Accordion allowMultiple>
                     <AccordionItem border='none'>                  
                         <AccordionButton >
                             <Box flex='1' textAlign='center'>
