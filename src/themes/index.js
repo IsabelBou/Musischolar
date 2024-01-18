@@ -19,15 +19,17 @@ const customTheme = extendTheme(
         global: (props) => ({
             "html, body": {
                 background: mode("primary.50", "primary.950")(props), //light and dark mode colors, respectively
+                fontSize: '100%', //initial font-size value to the whole document that is equal to the font size set by the user in the browser
             },
             "svg": {
                 '.definition-scale': {
                     color: mode("primary.950", "primary.65")(props),
                     fill: mode("primary.950", "primary.65")(props),
                 },
-                '.playing': { // TODO: Change playing color; check contrast
-                    color: mode("primary.500", "primary.200")(props),
-                    fill: mode("primary.500", "primary.200")(props),
+                '.playing': {
+                    color: mode("primary.780", "primary.50")(props),
+                    fill: mode("primary.780", "primary.50")(props),
+                    filter: mode("drop-shadow(0 0 6rem blueviolet)", "drop-shadow(0 0 6rem lavender)")(props),
                 }
             }
         }),
