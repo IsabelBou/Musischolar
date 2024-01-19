@@ -16,7 +16,7 @@ const Header = (props) => {
             justifyContent = "space-between"
             borderBottomWidth = "1px" >
             <MenuButton onOpen = { onOpen } />
-            <Text display = "flex" fontSize = "2xl" fontWeight = "bold" justifyContent = "center">
+            <Text as="header" display = "flex" fontSize = "3xl" fontWeight = "bold" justifyContent = "center">
                 Header
             </Text>
             <ButtonGroup display='flex' justifyContent='space-between'>

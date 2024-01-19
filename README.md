@@ -75,9 +75,9 @@ Verovio is also capable of producing MIDI files that are played using JZZ.js MID
   - [ ] Structure studyable conservatory content for routing
   - [ ] Encode MEI files for every topic to be covered
   - [x] Add context-relevant tags to MEI files for dynamic modification
-- [ ] Quality
+- [x] Quality
   - [x] Grant responsiveness
-  - [ ] Verify accessibility
+  - [x] Verify accessibility
 - [ ] Hosting
   - [ ] Set up GitHub Pages
 

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
+    "@fontsource/open-sans": "^5.0.22",
     "jzz-midi-smf": "^1.8.1",
     "jzz-synth-tiny": "^1.3.7",
     "localforage": "^1.10.0",
