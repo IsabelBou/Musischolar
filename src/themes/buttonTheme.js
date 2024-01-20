@@ -1,4 +1,9 @@
 import { defineStyle, defineStyleConfig } from '@chakra-ui/react'
+import '@fontsource/open-sans/500.css'
+
+const baseStyle = defineStyle({
+    fontFamily: `"Open Sans", sans-serif`,
+})
 
 const sizes = {
     sq: defineStyle({
@@ -16,6 +21,7 @@ const sizes = {
 }
 
 export const buttonTheme = defineStyleConfig({
+    baseStyle,
     sizes,
     defaultProps: {
         size: 'sq',
