@@ -27,16 +27,16 @@ const VerovioRenderer = (props) => {
     // gets MEI score from URL and saves it as plain text
     useEffect(() => {
         async function retrieveScore() {
-            const score = await fetch ( url )
+            const score = await fetch (url)
                 .then((response) => response.text());
             setScore(score);
         }
         retrieveScore();
-    })
+    }, [url]) // Only runs effect if URL changes
 
         /* SHEET RENDERING */
-    // setup MEI rendering options and load previously saved MEI score as text
-    verovioToolkit.setOptions(verovioRenderOptions());
+    // Setup MEI rendering options and load previously saved MEI score as text
+    verovioToolkit.setOptions(verovioRenderOptions({transpose: KEY[key].trasposevrv}));
     verovioToolkit.loadData(score);
     const scoreSVG = verovioToolkit.renderToSVG(1, {});
 
@@ -47,6 +47,7 @@ const VerovioRenderer = (props) => {
     setMidi(midiString);
 
         /* HIGHLIGHT NOTES BEING PLAYED */
+    // OPTIMIZE: Remove flickering
     // Gets list of notes being played in the MIDI at a given time in milliseconds and set as class 'playing' for styling
     useEffect(() => {
         // Remove attribute 'playing' of all previously 'playing' notes
@@ -63,8 +64,6 @@ const VerovioRenderer = (props) => {
 
     console.log("tempo: ", tempo);
     console.log("current ms: ", ms);
-    console.log("key context: ", key)
-    console.log("Traspose command: ", KEY[key].trasposevrv)
 
     // returns HTML in a div, otherwise SVG will be shown as text in page
     return (
