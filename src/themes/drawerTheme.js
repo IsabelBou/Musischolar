@@ -14,7 +14,7 @@ const baseStyle = definePartsStyle({
     overlay: { 
         backdropFilter: 'auto',
         backdropBlur: '1.5px',
-        backdropSaturate:'50%',        
+        backdropSaturate:'50%',
     }
 })
 
