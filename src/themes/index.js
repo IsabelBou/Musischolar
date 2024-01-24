@@ -8,10 +8,8 @@ import { buttonTheme } from './buttonTheme'
 import { popoverTheme } from './popoverTheme'
 import { drawerTheme } from './drawerTheme'
 import { sliderTheme } from './sliderTheme'
+import { modalTheme } from './modalTheme'
 import '@fontsource/open-sans/500.css'
-
-
-// TODO: Change background color for modal
 
 // TODO: Customize scrollbars
 
@@ -23,7 +21,7 @@ const customTheme = extendTheme(
                 background: mode("primary.50", "primary.950")(props), // Light and dark mode colors, respectively
                 fontSize: '100%', // Equals initial font-size value to user-preferred browser font size
                 letterSpacing: "0.07rem", // Larger inter-letter spacing improves readability; ideally around 35% of the average letter width
-                wordSpacing: '0.3rem', // Inter-word spacing should be at least 3.5 times the inter-letter spacing
+                wordSpacing: '0.3rem', // Inter-word spacing at least 3.5 times the inter-letter spacing
                 lineHeight: '1.5rem', // Line spacing at least space-and-a-half within paragraphs
             },
             "svg": {
@@ -31,14 +29,14 @@ const customTheme = extendTheme(
                     color: mode("primary.950", "primary.65")(props),
                     fill: mode("primary.950", "primary.65")(props),
                 },
-                '.playing': {
+                '.playing': { // Styles highlighting of currently playing notes
                     color: mode("primary.780", "primary.50")(props),
                     fill: mode("primary.780", "primary.50")(props),
                     filter: mode("drop-shadow(0 0 6rem blueviolet)", "drop-shadow(0 0 6rem lavender)")(props),
                 }
             },
             "p": {
-                mb: '1rem' // Paragraph spacing is at least 1.5 times larger than the line spacing, but should not exceed 2.0 times larger than the line spacing
+                mb: '1rem' // Paragraph spacing between 1.5 - 2.0 times larger than line spacing
             },
             "a":{
                 color: mode("primary.800", "primary.50")(props),
@@ -60,6 +58,7 @@ const customTheme = extendTheme(
         Popover: popoverTheme,
         Drawer: drawerTheme,
         Slider: sliderTheme,
+        Modal: modalTheme,
     },
 },
     withDefaultColorScheme({ colorScheme: 'primary' }),

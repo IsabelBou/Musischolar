@@ -3,8 +3,6 @@ import { Link as ReactRouterLink } from 'react-router-dom'
 import { Link as ChakraLink } from '@chakra-ui/react'
 import { useColorModeValue  } from "@chakra-ui/react";
 
-// TODO: Style links
-
 const NavItem = (props) => {
     const bgColor = useColorModeValue('primary.100', 'primary.600'); // (light mode, dark mode)
     const { path, title } = props;
