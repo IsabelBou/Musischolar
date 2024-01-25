@@ -14,7 +14,7 @@ const $arrowBg = cssVar("popper-arrow-bg")
 
 const popoverColors = {
     dark: 'primary.85',
-    light: 'primary.300',
+    light: 'primary.200',
 }
 
 const { definePartsStyle, defineMultiStyleConfig } =

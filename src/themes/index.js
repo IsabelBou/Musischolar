@@ -21,7 +21,7 @@ const customTheme = extendTheme(
                 background: mode("primary.50", "primary.950")(props), // Light and dark mode colors, respectively
                 fontSize: '100%', // Equals initial font-size value to user-preferred browser font size
                 letterSpacing: "0.07rem", // Larger inter-letter spacing improves readability; ideally around 35% of the average letter width
-                wordSpacing: '0.3rem', // Inter-word spacing at least 3.5 times the inter-letter spacing
+                wordSpacing: '0.25rem', // Inter-word spacing at least 3.5 times the inter-letter spacing
                 lineHeight: '1.5rem', // Line spacing at least space-and-a-half within paragraphs
             },
             "svg": {
@@ -30,8 +30,8 @@ const customTheme = extendTheme(
                     fill: mode("primary.950", "primary.65")(props),
                 },
                 '.playing': { // Styles highlighting of currently playing notes
-                    color: mode("primary.780", "primary.50")(props),
-                    fill: mode("primary.780", "primary.50")(props),
+                    color: mode("comp_pink.900", "comp_pink.50")(props),
+                    fill: mode("comp_pink.900", "comp_pink.50")(props),
                     filter: mode("drop-shadow(0 0 6rem blueviolet)", "drop-shadow(0 0 6rem lavender)")(props),
                 }
             },
