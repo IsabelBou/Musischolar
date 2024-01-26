@@ -5,7 +5,7 @@ import Player from './MidiPlayer';
 const customCard = (props) => {
     const { title, description, score } = props;
     return (
-        <Card>
+        <Card variant='accordionSingle'>
             <CardHeader>
                 <Accordion allowMultiple>
                     <AccordionItem border='none'>                  
