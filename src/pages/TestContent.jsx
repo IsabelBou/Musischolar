@@ -1,13 +1,13 @@
 import { SimpleGrid, Card, Box } from '@chakra-ui/react'
 import CustomCard from '../components/CustomCard';
+import DoubleCard from '../components/DoubleCard';
 import { cards } from '../resources/constants';
 
 function TestContent() {
     return (
         <Box> 
-            <br></br>
             <Card> Test </Card>
-            <br></br>
+            <DoubleCard />
             <SimpleGrid
             spacing = {4} 
             columns = {{ base: 1, sm: 1, md: 2 }}> {/* If screen about the size of a phone (portrait), 1 column. Otherwise, 2 of them*/}
