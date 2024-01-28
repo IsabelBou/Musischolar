@@ -12,14 +12,14 @@ const doubleCard = (props) => {
                 <SimpleGrid
                 spacingX = {4}
                 columns = {{ base: 1, sm: 1, md: 2 }}> {/* If screen about the size of a phone (portrait), 1 column. Otherwise, 2 of them*/}
-                    <Card variant='column'>
+                    <Card variant='group'>
                         <CardHeader>
                             Column 1
                         </CardHeader>
                         <Card variant='accordionSingle'> Test 1 </Card>
                         <Card variant='accordionSingle'> Test 2 </Card>
                     </Card>
-                    <Card variant='column'>
+                    <Card variant='group'>
                         <CardHeader>
                             Column 2
                         </CardHeader>

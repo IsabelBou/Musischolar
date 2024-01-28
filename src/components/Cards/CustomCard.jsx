@@ -1,6 +1,6 @@
 import { Box, Card, CardBody, CardHeader } from '@chakra-ui/react';
 import { AccordionButton, AccordionIcon, AccordionPanel, AccordionItem, Accordion } from '@chakra-ui/react';
-import Player from './MidiPlayer';
+import Player from '../MidiPlayer';
 
 const customCard = (props) => {
     const { title, description, score } = props;
