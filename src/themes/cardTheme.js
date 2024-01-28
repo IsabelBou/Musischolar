@@ -30,7 +30,7 @@ const variants = {
 
 	double: definePartsStyle({
 		container: {
-			backgroundColor: "analog200.50",
+			backgroundColor: "analog400.50",
 			_dark:{
 				backgroundColor: "analog200.750",
 			},
@@ -46,7 +46,7 @@ const variants = {
 		},
 	}),
 
-	column: definePartsStyle({
+	group: definePartsStyle({
 		container: {
 			backgroundColor: "analog400.100",
 			_dark:{
@@ -57,7 +57,7 @@ const variants = {
 		},
 		header: {
 			paddingY: '1rem',
-			fontSize: '1.5rem',
+			fontSize: '1.3rem',
 		},
 		body: {
 			padding:'0.25rem',
