@@ -1,6 +1,8 @@
 // MEI file repository
 export const scores = {
+    // Modes
     JONICO: 'https://raw.githubusercontent.com/IsabelBou/MeiTestFiles/main/DoM.mei'
+    // Mode tonal equivalents
 }
 
 // Custom card content
@@ -9,6 +11,33 @@ export const cards = {
         title: 'Title',
         description: 'More Information',
         score: scores.JONICO,
+    }
+}
+
+export const wideCard = {
+    TEMPLATE: {
+        title: 'Wide Card Title',
+        left: { ...cards.TEMPLATE },
+        right: { ...cards.TEMPLATE },
+    }
+}
+
+export const parallelCards = {
+    TEMPLATE: {
+        left: {
+            title: 'Title left',
+            cards: [
+                {...cards.TEMPLATE},
+                {...cards.TEMPLATE},
+            ],
+        },
+        right: {
+            title: 'Title right',
+            cards: [
+                {...cards.TEMPLATE},
+                {...cards.TEMPLATE},
+            ],
+        },
     }
 }
 
