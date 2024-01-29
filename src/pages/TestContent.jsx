@@ -1,15 +1,23 @@
-import { SimpleGrid, Card, Box } from '@chakra-ui/react'
+import { SimpleGrid, Card, CardHeader, CardBody, Box } from '@chakra-ui/react'
 import CustomCard from '../components/Cards/CustomCard';
-import DoubleCardH from '../components/Cards/DoubleCardH';
-import DoubleCardV from '../components/Cards/DoubleCardV';
-import { cards } from '../resources/constants';
+import WideCard from '../components/Cards/WideCard';
+import ParallelCards from '../components/Cards/ParallelCard';
+import { cards, wideCard, parallelCards } from '../resources/constants';
 
 function TestContent() {
     return (
         <Box> 
-            <Card> Test </Card>
-            <DoubleCardH />
-            <DoubleCardV />
+            {/* Composite Cards */}
+            <Card variant='double'>
+                <CardHeader>
+                    Double Card
+                </CardHeader>
+                <CardBody>
+                    <WideCard {...wideCard.TEMPLATE} />
+                    <ParallelCards {...parallelCards.TEMPLATE} />
+                </CardBody>
+            </Card>
+            { /*Stand-alone cards*/ }
             <Card> Outside Grid Test </Card>
             <SimpleGrid
             spacingX = {4} 
