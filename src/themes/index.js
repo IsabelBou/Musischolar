@@ -9,6 +9,7 @@ import { popoverTheme } from './popoverTheme'
 import { drawerTheme } from './drawerTheme'
 import { sliderTheme } from './sliderTheme'
 import { modalTheme } from './modalTheme'
+import { SimpleGrid } from '@chakra-ui/react'
 import '@fontsource/open-sans/500.css'
 
 // TODO: Customize scrollbars
@@ -66,7 +67,12 @@ const customTheme = extendTheme(
         config: {
             disableTransitionOnChange: false
         },
-    }
+    },
+    // SimpleGrid cannot have custom theming, so next best thing to avoid clutter is to force its default props here:
+    SimpleGrid.defaultProps = {
+        spacingX: 4,
+        columns: { base: 1, sm: 1, md: 2 }
+    }, {/* If screen about the size of a phone (portrait), 1 column. Otherwise, 2 of them*/}
 )
 
 export default customTheme

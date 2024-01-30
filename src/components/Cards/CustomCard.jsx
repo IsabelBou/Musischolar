@@ -2,6 +2,7 @@ import { Box, Card, CardBody, CardHeader } from '@chakra-ui/react';
 import { AccordionButton, AccordionIcon, AccordionPanel, AccordionItem, Accordion } from '@chakra-ui/react';
 import Player from '../MidiPlayer';
 
+// TODO: make it responsive
 const customCard = (props) => {
     const { title, description, score } = props;
     return (

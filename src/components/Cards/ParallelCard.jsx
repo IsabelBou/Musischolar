@@ -12,9 +12,7 @@ const ParallelCards = (props) => {
     });
 
     return (
-        <SimpleGrid
-        spacingX = {4}
-        columns = {{ base: 1, sm: 1, md: 2 }}> {/* If screen about the size of a phone (portrait), 1 column. Otherwise, 2 of them*/}
+        <SimpleGrid>
             <Card variant='group'>
                 <CardHeader>
                     {left.title}
