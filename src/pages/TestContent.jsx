@@ -19,9 +19,7 @@ function TestContent() {
             </Card>
             { /*Stand-alone cards*/ }
             <Card> Outside Grid Test </Card>
-            <SimpleGrid
-            spacingX = {4} 
-            columns = {{ base: 1, sm: 1, md: 2 }}> {/* If screen about the size of a phone (portrait), 1 column. Otherwise, 2 of them*/}
+            <SimpleGrid>
                 <CustomCard {...cards.TEMPLATE}/>
                 <CustomCard {...cards.TEMPLATE}/>
                 <Card> Inside Grid Test </Card>

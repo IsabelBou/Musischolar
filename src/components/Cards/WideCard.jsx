@@ -9,7 +9,7 @@ const WideCard = (props) => {
             <CardHeader>
                 {title}
             </CardHeader>
-            <SimpleGrid spacingX = {4} columns = {{ base: 1, sm: 1, md: 2 }}>
+            <SimpleGrid>
                 <CustomCard { ...left } />
                 <CustomCard { ...right } />
             </SimpleGrid>

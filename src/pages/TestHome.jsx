@@ -6,7 +6,10 @@ function TestHome() {
     return(
         <Box> 
             Home
-            <ChakraLink as = { ReactRouterLink } to = '/test'>TestContent </ChakraLink>
+            <br />
+            <ChakraLink as = { ReactRouterLink } to = '/test'>TestContent</ChakraLink>
+            <br />
+            <ChakraLink as = { ReactRouterLink } to = '/LenguajeMusical'>Lenguaje Musical</ChakraLink>
         </Box>
         
     )
