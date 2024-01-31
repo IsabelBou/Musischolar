@@ -74,6 +74,7 @@ Verovio is also capable of producing MIDI files that are played using JZZ.js MID
 - [x] Quality
   - [x] Grant responsiveness
   - [x] Verify accessibility
+  - [ ] Migrate to Tone.js
   - [ ] Improve Performance
 - [ ] Hosting
   - [ ] Set up GitHub Pages
@@ -83,7 +84,6 @@ Verovio is also capable of producing MIDI files that are played using JZZ.js MID
   - Match mouse coordinates and note id (for on-demand midi playback repositioning or highlighting)
   - Enable marking cards as favourites to see all of the selected ones in a single page
   - Conditionally display an additional single-lined staff with ghost notes representing beats
-  - Change MIDI Synthesizer
   - Tonality selector as wheel menu ([fifths circle](https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Circle_of_fifths_deluxe_4.svg/1024px-Circle_of_fifths_deluxe_4.svg.png))
   - AppShell fixed footer as piano keyboard, showing played notes acording to MIDI.
   - Sinusoidal chart with [note frequencies](https://upload.wikimedia.org/wikipedia/commons/a/ad/Piano_key_frequencies.png) in Harmony class' notes

@@ -1,26 +1,28 @@
 import { Route } from 'react-router-dom'
 import { ROUTES } from './RouterConfig';
-import TestHome from '../../pages/TestHome';
-import AppShell from '../AppShell/AppShell'
 import { createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 
-const routing = () => {
+// index routes must have an extra parameter
+const isIndex = (index) => {
+    if(index) return "index"
+    else return null
+}
 
-    // Maps listed ROUTES
-    const pageRoutes = ROUTES.map(({ path, title, element }) => {
-        return <Route key = { title } path = { `${ path }` } element = { element } />; 
-    });
-    
-    // Returns ROUTES list nested inside AppShell
-    return (
-            <Route path="/" element={<AppShell />}>
-                <Route index element={<TestHome />} />
-                { pageRoutes } 
+// Recursively builds nested routes from ROUTES file
+const renderRoutes = (ROUTES) => {
+    return ROUTES.map(({ path, title, element, index, children = [] }) => {
+        return (
+            <Route key = { title } {...isIndex(index)} path = { `${ path }` } element = { element }>
+                {children.length > 0 && <Route> { renderRoutes(children) } </Route>}
             </Route>
-    );
+        );
+    });
 };
 
-// Used as param in RouterProvider inside App
-const router = createBrowserRouter(createRoutesFromElements(routing()));
+// Creates the router
+const Router = 
+    createBrowserRouter(
+        createRoutesFromElements(
+            renderRoutes(ROUTES)));
 
-export default router;
+export default Router;
