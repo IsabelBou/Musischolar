@@ -1,14 +1,15 @@
 import { ROUTES } from '../router/RouterConfig';
 import NavItem from "./NavItem";
 
+// FIXME: Recreate algorithm taking nested routes into account
+
 function Nav() {
-    const NavItems = ROUTES.map(({ path, title }) => {
+    const NavItems = ROUTES[0].children.map(({ path, title }) => {
         return <NavItem key = { title } path = { `${ path }` } title = { title }/>; 
     });
 
     return (
         <nav>
-            <NavItem path = '/' title = 'testHome'/>
             { NavItems }
         </nav>
     );
