@@ -1,10 +1,11 @@
 import createVerovioModule from 'verovio/wasm'; //'verovio/wasm-hum' for humdrum support
 import { VerovioToolkit } from 'verovio/esm';
-import { useState, useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 import { TempoContext } from '../AppShell/SelectionContext';
 import { KeyContext } from '../AppShell/SelectionContext';
 import { KEY } from '../../resources/constants';
 import verovioRenderOptions from './verovioRenderOptions';
+import useScore from '../../hooks/useScore';
 
 // TODO: Adjust tempo based on TempoSelector slider by modifying markup in MEI. See: https://book.verovio.org/toolkit-reference/toolkit-methods.html#edit
 // Alternatively, pass TempoContext to MidiPlayer and alter player.speed() with user selection.
@@ -21,23 +22,11 @@ const VerovioRenderer = (props) => {
     const { tempo } = useContext(TempoContext);
     const { key } = useContext(KeyContext);
     const { url, setMidi, ms } = props;
-    const [score, setScore] = useState();
-
-        /* FETCH FILE */
-    // gets MEI score from URL and saves it as plain text
-    useEffect(() => {
-        async function retrieveScore() {
-            const score = await fetch (url)
-                .then((response) => response.text());
-            setScore(score);
-        }
-        retrieveScore();
-    }, [url]) // Only runs effect if URL changes
 
         /* SHEET RENDERING */
     // Setup MEI rendering options and load previously saved MEI score as text
     verovioToolkit.setOptions(verovioRenderOptions({transpose: KEY[key].trasposevrv}));
-    verovioToolkit.loadData(score);
+    verovioToolkit.loadData(useScore(url));
     const scoreSVG = verovioToolkit.renderToSVG(1, {});
 
         /* MIDI CREATION */
