@@ -57,7 +57,7 @@ const variants = {
 		},
 		header: {
 			paddingY: '1rem',
-			fontSize: '1.3rem',
+			fontSize: '1.4rem',
 		},
 		body: {
 			padding:'0.25rem',
