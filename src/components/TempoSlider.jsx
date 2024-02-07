@@ -1,9 +1,9 @@
 import { Slider, SliderTrack, SliderThumb } from '@chakra-ui/react'
 import { Box, HStack, Text } from '@chakra-ui/react';
-import { useContext, useState } from 'react';
-import { TempoContext } from './AppShell/SelectionContext';
 import { Icon } from '@chakra-ui/react';
+import { useContext, useState } from 'react';
 import { GiSnail, GiRabbit } from "react-icons/gi"
+import { TempoContext } from '../context';
 
 /* 
 In order to display the tempo multiplier with equal spacing on both sides
@@ -14,6 +14,8 @@ the tempo values are calculated afterwards based on the slider thumb position:
 - absolute sliderValue is added 1 in order to avoid 0 as divisor
 */
 const TempoSlider = () => {
+
+    // IMPROVE: Move initial logic/pure part out of this component (hook/reducer?)
 
     const { tempo, setTempo } = useContext(TempoContext)
 

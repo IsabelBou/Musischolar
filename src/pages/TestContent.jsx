@@ -1,7 +1,5 @@
 import { SimpleGrid, Card, CardHeader, CardBody, Box } from '@chakra-ui/react'
-import CustomCard from '../components/Cards/CustomCard';
-import WideCard from '../components/Cards/WideCard';
-import ParallelCards from '../components/Cards/ParallelCard';
+import { CustomCard, WideCard, ParallelCards } from '../components/Cards';
 import { cards, wideCard, parallelCards } from '../resources/constants';
 
 function TestContent() {
