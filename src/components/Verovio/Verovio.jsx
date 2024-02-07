@@ -1,11 +1,12 @@
 import createVerovioModule from 'verovio/wasm'; //'verovio/wasm-hum' for humdrum support
 import { VerovioToolkit } from 'verovio/esm';
+
 import { useEffect, useContext } from "react";
-import { TempoContext } from '../AppShell/SelectionContext';
-import { KeyContext } from '../AppShell/SelectionContext';
-import { KEY } from '../../resources/constants';
-import verovioRenderOptions from './verovioRenderOptions';
-import useScore from '../../hooks/useScore';
+import { RenderOptions } from '.';
+
+import { TempoContext, KeyContext } from '../../context';
+import { KEY } from '../../resources';
+import useScore from '../../hooks';
 
 // TODO: Adjust tempo based on TempoSelector slider by modifying markup in MEI. See: https://book.verovio.org/toolkit-reference/toolkit-methods.html#edit
 // Alternatively, pass TempoContext to MidiPlayer and alter player.speed() with user selection.
@@ -25,7 +26,7 @@ const VerovioRenderer = (props) => {
 
         /* SHEET RENDERING */
     // Setup MEI rendering options and load previously saved MEI score as text
-    verovioToolkit.setOptions(verovioRenderOptions({transpose: KEY[key].trasposevrv}));
+    verovioToolkit.setOptions(RenderOptions({transpose: KEY[key].trasposevrv}));
     verovioToolkit.loadData(useScore(url));
     const scoreSVG = verovioToolkit.renderToSVG(1, {});
 
@@ -37,6 +38,7 @@ const VerovioRenderer = (props) => {
 
         /* HIGHLIGHT NOTES BEING PLAYED */
     // OPTIMIZE: Remove flickering
+    // TODO: Move highlight to custom hook or reducer; temporarily non-functional until migration to Tone.js
     // Gets list of notes being played in the MIDI at a given time in milliseconds and set as class 'playing' for styling
     useEffect(() => {
         // Remove attribute 'playing' of all previously 'playing' notes

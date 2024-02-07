@@ -1,9 +1,9 @@
 import { Slider, SliderTrack, SliderThumb, SliderMark } from '@chakra-ui/react'
 import { Box } from '@chakra-ui/react';
 import { useContext, useState } from 'react';
-import { KEY } from '../resources/constants';
-import { topMark, bottomMark } from '../themes/sliderTheme';
-import { KeyContext } from './AppShell/SelectionContext';
+import { KEY } from '../resources';
+import { topMark, bottomMark } from '../themes';
+import { KeyContext } from '../context';
 
 const ToneSlider = () => {
 

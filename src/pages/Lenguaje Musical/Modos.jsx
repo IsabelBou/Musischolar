@@ -2,7 +2,7 @@ import { Box, Heading } from "@chakra-ui/layout";
 
 import { wideCard} from '../../resources/constants';
 
-import WideCard from '../../components/Cards/WideCard';
+import WideCard from '../../components/Cards';
 
 
 function Modos() {

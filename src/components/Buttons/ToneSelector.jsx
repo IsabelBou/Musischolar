@@ -1,7 +1,7 @@
 import { Button, Tooltip } from "@chakra-ui/react";
 import { GiGClef } from "react-icons/gi";
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, useDisclosure } from '@chakra-ui/react'
-import ToneSlider from "./ToneSlider";
+import ToneSlider from "../ToneSlider";
 
 // IMPROVE: Replace slider with circle of fifths wheel menu
 
