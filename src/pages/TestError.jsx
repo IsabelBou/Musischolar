@@ -1,9 +1,7 @@
 import { Box } from "@chakra-ui/layout";
 
-function TestError() {
+export function TestError() {
     return(
         <Box> Error </Box>
     )
 }
-
-export default TestError

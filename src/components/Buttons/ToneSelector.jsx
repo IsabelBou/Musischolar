@@ -1,7 +1,7 @@
 import { Button, Tooltip } from "@chakra-ui/react";
 import { GiGClef } from "react-icons/gi";
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, useDisclosure } from '@chakra-ui/react'
-import ToneSlider from "../ToneSlider";
+import { ToneSlider } from "../ToneSlider";
 
 // IMPROVE: Replace slider with circle of fifths wheel menu
 
@@ -9,7 +9,7 @@ import ToneSlider from "../ToneSlider";
 
 // IMPROVE: Have tooltip display tonality preview
 
-const ToneSelector = () => {
+export const ToneSelector = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
@@ -35,5 +35,3 @@ const ToneSelector = () => {
     </div>
   );
 };
-
-export default ToneSelector;

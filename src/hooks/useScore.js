@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 // gets MEI score from URL and saves it as plain text
-export default function useScore(url) {
+export function useScore(url) {
     const [score, setScore] = useState([]);
 
     useEffect(() => {

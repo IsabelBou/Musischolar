@@ -1,7 +1,7 @@
 import { Button, Tooltip } from "@chakra-ui/react";
 import { GrMenu } from "react-icons/gr";
 
-const MenuButton = (props) => {
+export const MenuButton = (props) => {
 
     const { onOpen } = props;
 
@@ -21,5 +21,3 @@ const MenuButton = (props) => {
         </div>
     );
 };
-
-export default MenuButton;

@@ -58,29 +58,31 @@ Verovio is also capable of producing MIDI files that are played using JZZ.js MID
 ## Roadmap
 <a name="roadmap"></a>
 
-- [x] Basics
-  - [x] Render MEI files into SVG using Verovio
-  - [x] Create basic components for music SVG and relevant information display
-  - [x] Render MEI files into MIDI
-  - [x] Play MIDI files using jzz.js library
-  - [x] Visualize MIDI playing on sheet (Pending improvement)
-- [x] User Preferences
-  - [x] Create global Dark/Light mode toggle
-  - [x] Create global tempo selector as slider
-  - [x] Create global tonality selector
-- [x] Navigation
-  - [x] Responsive App Shell
-  - [x] Implement React Router
-- [x] Quality
-  - [x] Grant responsiveness
-  - [x] Verify accessibility
+- [x] **Basics**
+  - [x] ~~Render MEI files into SVG using Verovio~~
+  - [x] ~~Create basic components for music SVG and relevant information display~~
+  - [x] ~~Render MEI files into MIDI~~
+  - [x] ~~Play MIDI files using jzz.js library~~
+  - [x] Visualize MIDI playing on sheet (Currently disabled, Pending improvement)
+- [x] ~~User Preferences~~
+  - [x] ~~Create global Dark/Light mode toggle~~
+  - [x] ~~ Create global tempo selector as slider~~
+  - [x] ~~ Create global tonality selector~~
+- [x] ~~Navigation~~
+  - [x] ~~Responsive App Shell~~
+  - [x] ~~Implement React Router~~
+  - [ ] Nested Routing algorithm
+- [x] **Quality**
+  - [x] ~~Grant responsiveness~~
+  - [x] ~~Verify accessibility~~
   - [ ] Migrate to Tone.js
   - [ ] Improve Performance
-- [ ] Hosting
+  - [ ] Review adherence to React/JS patterns
+- [ ] **Hosting**
   - [ ] Set up GitHub Pages
 
 
-* Low Priority features and Enhancements:
+* **Low Priority features and Enhancements**:
   - Match mouse coordinates and note id (for on-demand midi playback repositioning or highlighting)
   - Enable marking cards as favourites to see all of the selected ones in a single page
   - Conditionally display an additional single-lined staff with ghost notes representing beats
@@ -95,9 +97,10 @@ Verovio is also capable of producing MIDI files that are played using JZZ.js MID
 ### See Also
 <a name="see-also"></a>
 
-* [Music Encoding Initiative (MEI)](https://github.com/music-encoding) - About the Music Encoding Initiative
-* [MEI project file repository](https://github.com/IsabelBou/MusischolarMeiFiles) - Custom MEI files used in the app.
-* [W3C Quick reference](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1) - Web Content Accessibility Guidelines (WCAG)
+* **[Music Encoding Initiative (MEI)](https://github.com/music-encoding)** - About the Music Encoding Initiative
+* **[MEI project file repository](https://github.com/IsabelBou/MusischolarMeiFiles)** - Custom MEI files used in the app.
+* **[W3C Quick reference](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1)** - Web Content Accessibility Guidelines (WCAG)
+* **[Dyslexia friendly style guide](https://www.bdadyslexia.org.uk/advice/employers/creating-a-dyslexia-friendly-workplace/dyslexia-friendly-style-guide)** - Guidelines to facilitate ease of reading from the British Dyslexia Association
+* **[patterns.dev](https://www.patterns.dev/react/)** - Design, rendering, and performance patterns for React and vanilla JavaScript 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-

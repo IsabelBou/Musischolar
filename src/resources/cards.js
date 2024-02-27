@@ -51,7 +51,7 @@ export const cards = {
                 score: scores.EQMODES.JONICO,
             },
             DORICO: {
-                title: 'Tonalidad',
+                title: 'Tonalidad Menor',
                 description: 'More Information',
                 score: scores.EQMODES.DORICO,
             },

@@ -1,6 +1,7 @@
-export { KEY } from "./constants";
-export { cards as singleCards } from "./cards";
-export { parallelCards } from "./parallelCards";
-export { wideCards } from "./wideCards";
+import { KEY }                  from "./constants";
+import { cards }                from "./cards";
+import { parallelCards }        from "./parallelCards";
+import { wideCards }            from "./wideCards";
 
+export { KEY, cards as singleCards, parallelCards, wideCards }
 

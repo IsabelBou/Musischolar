@@ -4,9 +4,10 @@ import {
     Flex,
     Text,
 } from "@chakra-ui/react";
-import Nav from "./Nav";
 
-const Sidebar = (props) => {
+import { Nav } from "./Nav";
+
+export const Sidebar = (props) => {
     const { onClose } = props;
 
     return (
@@ -28,4 +29,3 @@ const Sidebar = (props) => {
         </Box>
     );
 };
-export default Sidebar

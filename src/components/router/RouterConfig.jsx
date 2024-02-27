@@ -1,14 +1,10 @@
-import AppShell from '../AppShell/AppShell'
-
-import Home from '../../pages/Home'
-import TestContent from "../../pages/TestContent"
-import TestError from "../../pages/TestError"
-import LenguajeMusical from "../../pages/Lenguaje Musical/LenguajeMusical"
-import Armonia from '../../pages/Armonia/Armonia'
-import Modos from '../../pages/Lenguaje Musical/Modos'
-
 import { Outlet } from "react-router-dom"
 
+import { AppShell } from '../AppShell/AppShell'
+
+import { Home, LenguajeMusical, Armonia, Modos } from '../../pages'
+
+import { TestContent, TestError } from '../../pages'
 
 export const ROUTES = [
     {

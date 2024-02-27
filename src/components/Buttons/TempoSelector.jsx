@@ -2,9 +2,10 @@ import { Button, Tooltip} from "@chakra-ui/react";
 import { Popover, PopoverTrigger, PopoverContent, PopoverHeader, PopoverArrow, PopoverBody } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react" //Needed for Popover workaround
 import { PiMetronomeDuotone } from "react-icons/pi";
-import TempoSlider from "../TempoSlider";
 
-const TempoSelector = () => {
+import { TempoSlider } from "../TempoSlider";
+
+export const TempoSelector = () => {
 
     return (
         <div>
@@ -30,5 +31,3 @@ const TempoSelector = () => {
         </div>
     );
 };
-
-export default TempoSelector;

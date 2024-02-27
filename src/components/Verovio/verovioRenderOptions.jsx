@@ -1,4 +1,4 @@
-export default function verovioRenderOptions (props) {
+export function verovioRenderOptions (props) {
 
     return {
     // Full option list: https://book.verovio.org/toolkit-reference/toolkit-options.html

@@ -1,15 +1,15 @@
 import './App.css';
 import { ChakraProvider } from '@chakra-ui/react'
-import customTheme from '../themes/index';
+import customTheme from '../themes';
 import { RouterProvider } from "react-router-dom";
 import router from '../components/router/Router';
-import { KeyContext, TempoContext } from '../components/AppShell/SelectionContext';
+import { KeyContext, TempoContext } from '../context';
 import { useState } from 'react';
 
 function App() {
-  const [key, setKey] = useState(0);
+  const [ key, setKey ] = useState(0);
   const keys = { key, setKey };
-  const [tempo, setTempo] = useState(1);
+  const [ tempo, setTempo ] = useState(1);
   const tempoMultiplier = { tempo, setTempo };
 
 

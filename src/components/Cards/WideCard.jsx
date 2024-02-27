@@ -1,8 +1,8 @@
 import { Card, CardHeader } from '@chakra-ui/react';
-import CustomCard from './CustomCard';
+import { CustomCard } from './index.js';
 import { SimpleGrid } from '@chakra-ui/react';
 
-const WideCard = (props) => {
+export const WideCard = (props) => {
     const { title, right, left } = props;
     return (
         <Card variant='group'>
@@ -16,5 +16,3 @@ const WideCard = (props) => {
         </Card>
     )
 }
-
-export default WideCard;

@@ -1,8 +1,8 @@
 import { Box, Card, CardBody, CardHeader } from '@chakra-ui/react';
 import { AccordionButton, AccordionIcon, AccordionPanel, AccordionItem, Accordion } from '@chakra-ui/react';
-import Player from '../MidiPlayer';
+import { Player } from '../Verovio';
 
-const customCard = (props) => {
+export const CustomCard = (props) => {
     const { title, description, score } = props;
     return (
         <Card variant='accordionSingle'>
@@ -27,5 +27,3 @@ const customCard = (props) => {
         </Card>
     )
 }
-
-export default customCard;

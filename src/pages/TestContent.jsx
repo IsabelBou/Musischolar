@@ -1,8 +1,8 @@
 import { SimpleGrid, Card, CardHeader, CardBody, Box } from '@chakra-ui/react'
 import { CustomCard, WideCard, ParallelCards } from '../components/Cards';
-import { cards, wideCard, parallelCards } from '../resources/constants';
+import { singleCards, wideCards, parallelCards } from '../resources';
 
-function TestContent() {
+export function TestContent() {
     return (
         <Box> 
             {/* Composite Cards */}
@@ -11,19 +11,17 @@ function TestContent() {
                     Double Card
                 </CardHeader>
                 <CardBody>
-                    <WideCard {...wideCard.TEMPLATE} />
+                    <WideCard {...wideCards.TEMPLATE} />
                     <ParallelCards {...parallelCards.TEMPLATE} />
                 </CardBody>
             </Card>
             { /*Stand-alone cards*/ }
             <Card> Outside Grid Test </Card>
             <SimpleGrid>
-                <CustomCard {...cards.TEMPLATE}/>
-                <CustomCard {...cards.TEMPLATE}/>
+                <CustomCard {...singleCards.TEMPLATE}/>
+                <CustomCard {...singleCards.TEMPLATE}/>
                 <Card> Inside Grid Test </Card>
             </SimpleGrid>
         </Box>
     )
 }
-
-export default TestContent

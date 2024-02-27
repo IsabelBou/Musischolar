@@ -2,12 +2,10 @@ import { ButtonGroup, Link } from '@chakra-ui/react'
 import { Link as ReactRouterLink } from 'react-router-dom'
 import { Flex, Heading } from '@chakra-ui/react'
 import { useColorModeValue  } from "@chakra-ui/react";
-import ModeToggle  from '../ModeToggle'
-import ToneSelector from '../ToneSelector'
-import TempoSelector from '../TempoSelector'
-import MenuButton from '../MenuButton'
 
-const Header = (props) => {
+import { ModeToggle, MenuButton, ToneSelector, TempoSelector } from '../Buttons';
+
+export const Header = (props) => {
     const bgColor = useColorModeValue('analog500.100', 'analog500.900'); // (light mode, dark mode)
     const { onOpen } = props; // Clicking the Menu Button triggers sidebar drawer on above component
 

@@ -1,7 +1,7 @@
 import { Button } from "@chakra-ui/react";
 import { PiPauseDuotone, PiPlayDuotone } from 'react-icons/pi'
 
-const PlayPauseToggle = (props) => {
+export const PlayPauseToggle = (props) => {
     const { onClick, isPlaying } = props;
     return (
         <div>
@@ -12,5 +12,3 @@ const PlayPauseToggle = (props) => {
         </div>
     );
 };
-
-export default PlayPauseToggle;

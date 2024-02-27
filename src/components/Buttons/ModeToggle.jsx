@@ -1,7 +1,7 @@
 import {useColorMode, Box, Tooltip } from "@chakra-ui/react";
 import { PiSunDuotone, PiMoonStarsDuotone } from 'react-icons/pi'
 
-const ModeToggle = () => {
+export const ModeToggle = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   const CYCLE = [
@@ -73,5 +73,3 @@ const ModeToggle = () => {
     </div>
   );
 };
-
-export default ModeToggle;
