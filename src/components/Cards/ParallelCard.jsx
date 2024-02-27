@@ -1,8 +1,8 @@
 import { Card, CardHeader } from '@chakra-ui/react';
 import { SimpleGrid } from '@chakra-ui/react';
-import CustomCard from './CustomCard';
+import { CustomCard } from './index.js';
 
-const ParallelCards = (props) => {
+export const ParallelCards = (props) => {
     const { left, right } = props;
     const LeftCards = left.cards.map(({title, description, score}) =>{
         return <CustomCard key = { title } title = { title } description = { description } score = { score }  />
@@ -26,8 +26,5 @@ const ParallelCards = (props) => {
                 { RightCards }
             </Card>
         </SimpleGrid>
-
     )
 }
-
-export default ParallelCards;

@@ -1,11 +1,13 @@
 import { Slider, SliderTrack, SliderThumb, SliderMark } from '@chakra-ui/react'
 import { Box } from '@chakra-ui/react';
 import { useContext, useState } from 'react';
+
+import { topMark, bottomMark } from '../themes/sliderTheme';
+
 import { KEY } from '../resources';
-import { topMark, bottomMark } from '../themes';
 import { KeyContext } from '../context';
 
-const ToneSlider = () => {
+export const ToneSlider = () => {
 
     const { key, setKey } = useContext(KeyContext)
     const [sliderValue, setSliderValue] = useState(key)
@@ -34,5 +36,3 @@ return (
         <Box> Menor: { KEY[sliderValue].menor }</Box>
     </Box>
 )};
-
-export default ToneSlider;

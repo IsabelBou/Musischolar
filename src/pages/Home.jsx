@@ -4,7 +4,7 @@ import { Link as ChakraLink } from '@chakra-ui/react'
 
 // TODO: Add actual content
 
-function Home() {
+export function Home() {
     return(
         <Box> 
             <Heading> Welcome </Heading>
@@ -19,5 +19,3 @@ function Home() {
         </Box>
     )       // TODO: Algorithm for page content mapping
 }
-
-export default Home

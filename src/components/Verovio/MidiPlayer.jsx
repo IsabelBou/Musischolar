@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef,  } from 'react';
-import PlayPauseToggle from './Buttons';
-import VerovioRenderer from './Verovio';
+import { PlayPauseToggle } from '../Buttons';
+import { VerovioRenderer } from '.';
 
 import { JZZ } from 'jzz';
 import { SMF } from 'jzz-midi-smf';
@@ -23,7 +23,7 @@ async function loadFile(midi, midiout, setIsPlaying) {
     return player;
 }
 
-const Player = (props) => {
+export const Player = (props) => {
     // Score is URL with MEI file, passed to VerovioRenderer
     const { score } = props;
     // Used to sync Play/Pause toggler state with MIDI's
@@ -70,5 +70,3 @@ const Player = (props) => {
         </div>
     )
 }
-
-export default Player;

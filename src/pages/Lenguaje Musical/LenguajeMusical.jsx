@@ -2,7 +2,7 @@ import { Box, Heading } from "@chakra-ui/layout";
 import { Link as ReactRouterLink } from 'react-router-dom'
 import { Link } from "@chakra-ui/react";
 
-function LenguajeMusical() {
+export function LenguajeMusical() {
     return(
         <Box> 
             <Heading> Lenguaje Musical </Heading>
@@ -11,5 +11,3 @@ function LenguajeMusical() {
         </Box>
     )       // TODO: Algorithm for page content mapping
 }
-
-export default LenguajeMusical

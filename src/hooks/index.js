@@ -1,1 +1,3 @@
-export { useScore } from "./useScore";
+import { useScore }  from "./useScore";
+
+export { useScore }

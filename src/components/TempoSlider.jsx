@@ -3,6 +3,7 @@ import { Box, HStack, Text } from '@chakra-ui/react';
 import { Icon } from '@chakra-ui/react';
 import { useContext, useState } from 'react';
 import { GiSnail, GiRabbit } from "react-icons/gi"
+
 import { TempoContext } from '../context';
 
 /* 
@@ -13,7 +14,7 @@ the tempo values are calculated afterwards based on the slider thumb position:
 - Negative values are treated as divisor to 1 to provide fractional multipliers
 - absolute sliderValue is added 1 in order to avoid 0 as divisor
 */
-const TempoSlider = () => {
+export const TempoSlider = () => {
 
     // IMPROVE: Move initial logic/pure part out of this component (hook/reducer?)
 
@@ -53,5 +54,3 @@ return (
         <Text>Speed Multiplier: x{ multiplier(sliderValue) }</Text>
     </Box>
 )};
-
-export default TempoSlider;

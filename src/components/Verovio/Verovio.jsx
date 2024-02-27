@@ -6,7 +6,7 @@ import { RenderOptions } from '.';
 
 import { TempoContext, KeyContext } from '../../context';
 import { KEY } from '../../resources';
-import useScore from '../../hooks';
+import { useScore } from '../../hooks';
 
 // TODO: Adjust tempo based on TempoSelector slider by modifying markup in MEI. See: https://book.verovio.org/toolkit-reference/toolkit-methods.html#edit
 // Alternatively, pass TempoContext to MidiPlayer and alter player.speed() with user selection.
@@ -18,7 +18,7 @@ const VerovioModule = await createVerovioModule();
 const verovioToolkit = new VerovioToolkit(VerovioModule);
 // TODO: Disable MIDI playback until module finishes loading 
 
-const VerovioRenderer = (props) => {
+export const VerovioRenderer = (props) => {
 
     const { tempo } = useContext(TempoContext);
     const { key } = useContext(KeyContext);
@@ -61,4 +61,3 @@ const VerovioRenderer = (props) => {
         <div dangerouslySetInnerHTML={{__html: scoreSVG}}/>
     )
 }
-export default VerovioRenderer;
