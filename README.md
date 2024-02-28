@@ -63,7 +63,7 @@ Verovio is also capable of producing MIDI files that are played using JZZ.js MID
   - [x] ~~Create basic components for music SVG and relevant information display~~
   - [x] ~~Render MEI files into MIDI~~
   - [x] ~~Play MIDI files using jzz.js library~~
-  - [x] Visualize MIDI playing on sheet (Currently disabled, Pending improvement)
+  - [x] Visualize MIDI playing on sheet (Disabled. Pending improvement or remake)
 - [x] ~~User Preferences~~
   - [x] ~~Create global Dark/Light mode toggle~~
   - [x] ~~ Create global tempo selector as slider~~
@@ -77,7 +77,9 @@ Verovio is also capable of producing MIDI files that are played using JZZ.js MID
   - [x] ~~Verify accessibility~~
   - [ ] Migrate to Tone.js
   - [ ] Improve Performance
+  - [ ] Progressively Hydrate page
   - [ ] Review adherence to React/JS patterns
+  - [ ] Automate testing (Vitest/JEST)
 - [ ] **Hosting**
   - [ ] Set up GitHub Pages
 

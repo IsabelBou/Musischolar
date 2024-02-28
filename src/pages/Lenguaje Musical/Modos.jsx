@@ -8,8 +8,7 @@ import { wideCards } from '../../resources';
 export function Modos() {
     return(
         <Box> 
-            <Heading> Modos </Heading>
-            <br />
+            <Heading variant="title"> Modos </Heading>
             <WideCard {...wideCards.MODOS.JONICO} />
             <WideCard {...wideCards.MODOS.DORICO} />
             <WideCard {...wideCards.MODOS.FRIGIO} />
