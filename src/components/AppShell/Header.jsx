@@ -16,7 +16,7 @@ export const Header = (props) => {
             alignItems = "center"
             justifyContent = "space-between">
             <MenuButton onOpen = { onOpen } />
-            <Heading fontWeight = "bold" justifyContent = "center">
+            <Heading>
                 <Link as = { ReactRouterLink } to = "/">
                     Musischolar
                 </Link>

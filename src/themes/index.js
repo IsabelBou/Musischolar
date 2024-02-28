@@ -9,6 +9,8 @@ import { popoverTheme } from './popoverTheme'
 import { drawerTheme } from './drawerTheme'
 import { sliderTheme } from './sliderTheme'
 import { modalTheme } from './modalTheme'
+import { headingTheme } from './heading'
+
 import { SimpleGrid } from '@chakra-ui/react'
 import '@fontsource/open-sans/500.css'
 
@@ -60,6 +62,7 @@ const customTheme = extendTheme(
         Drawer: drawerTheme,
         Slider: sliderTheme,
         Modal: modalTheme,
+        Heading: headingTheme,
     },
 },
     withDefaultColorScheme({ colorScheme: 'primary' }),

@@ -5,7 +5,7 @@ import { Link } from "@chakra-ui/react";
 export function Armonia() {
     return(
         <Box> 
-            <Heading> Armonía </Heading>
+            <Heading variant="title"> Armonía </Heading>
             <br />
             <Link as = { ReactRouterLink } to = "nested"> Nested Page </Link>
         </Box>

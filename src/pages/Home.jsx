@@ -7,7 +7,7 @@ import { Link as ChakraLink } from '@chakra-ui/react'
 export function Home() {
     return(
         <Box> 
-            <Heading> Welcome </Heading>
+            <Heading variant="title"> Welcome </Heading>
             <br />
             Add site explanation here
             <br /><br />

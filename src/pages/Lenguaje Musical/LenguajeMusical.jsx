@@ -5,7 +5,7 @@ import { Link } from "@chakra-ui/react";
 export function LenguajeMusical() {
     return(
         <Box> 
-            <Heading> Lenguaje Musical </Heading>
+            <Heading variant="title"> Lenguaje Musical </Heading>
             <br />
             <Link as = { ReactRouterLink } to = "Modos"> Modos </Link>
         </Box>
