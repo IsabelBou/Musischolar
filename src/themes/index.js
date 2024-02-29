@@ -26,6 +26,9 @@ const customTheme = extendTheme(
                 letterSpacing: "0.07rem", // Larger inter-letter spacing improves readability; ideally around 35% of the average letter width
                 wordSpacing: '0.25rem', // Inter-word spacing at least 3.5 times the inter-letter spacing
                 lineHeight: '1.5rem', // Line spacing at least space-and-a-half within paragraphs
+                scrollbarColor: `${mode("#6842d6", "#8e6ce0")(props)} transparent`, // Light = primary.400, dark = primary.300
+                scrollBehavior: "smooth",
+                scrollbarRadius: 5,
             },
             "svg": {
                 '.definition-scale': {
