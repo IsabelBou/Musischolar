@@ -8,7 +8,7 @@ export function useScore(url) {
         async function retrieveScore() {
             const score = await fetch (url)
                 .then((response) => response.text());
-        setScore(score);
+            setScore(score);
         }
 
     retrieveScore();
