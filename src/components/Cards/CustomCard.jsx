@@ -1,6 +1,6 @@
 import { Box, Card, CardBody, CardHeader } from '@chakra-ui/react';
 import { AccordionButton, AccordionIcon, AccordionPanel, AccordionItem, Accordion } from '@chakra-ui/react';
-import { Player } from '../Verovio';
+import { Display } from '../Music';
 
 export const CustomCard = (props) => {
     const { title, description, score } = props;
@@ -22,7 +22,7 @@ export const CustomCard = (props) => {
                 </Accordion>
             </CardHeader>
             <CardBody>
-                <Player score = { score }/>
+                <Display score = { score }/>
             </CardBody>
         </Card>
     )
