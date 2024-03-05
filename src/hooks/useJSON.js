@@ -1,10 +1,10 @@
 import { Midi } from '@tonejs/midi'
 import { useBlob } from '.';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 //Turns MIDI blob into Tone.js usable JSON object 
-export function useJSON(midiString, setMidiJson) {
-
+export function useJSON (midiString) {
+    const [midiJson, setMidiJson] = useState([]);
     useEffect( () => {
         async function RetrieveMidi() {
             const reader = new FileReader();
@@ -15,6 +15,6 @@ export function useJSON(midiString, setMidiJson) {
             reader.readAsArrayBuffer(useBlob(midiString));   
         }
         RetrieveMidi();
-    }, [midiString, setMidiJson])
-    
+    }, [midiString, setMidiJson]);
+    return midiJson;
 }
