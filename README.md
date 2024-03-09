@@ -79,7 +79,7 @@ Verovio is also capable of producing MIDI files that are played using JZZ.js MID
   - [x] ~~Migrate from JZZ to Tone.js~~
   - [x] ~~Improve Performance~~
   - [ ] Improve on-sheet MIDI visualization
-  - [ ] Change playback synth into more realistic instrument
+  - [ ] Change playback synthetizer into more realistic instrument
   - [ ] Progressively hydrate page
   - [ ] Review adherence to React/JS patterns
   - [ ] Automate testing (Vitest/JEST)
