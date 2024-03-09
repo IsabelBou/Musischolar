@@ -13,7 +13,7 @@ export const Display = (props) => {
 
     const [ isPlaying, setIsPlaying ] = useState(false);
 
-    //TODO: Sync Pay/Pause Toggler with MIDI reproduction
+    //TODO: Allow Pause and Resumption with Toggler
 
     return (
         <Box>

@@ -6,13 +6,15 @@ export const TonePlayer = (props) => {
     const synth = new Tone.Synth().toDestination();
 
     useEffect( () => {
-        const now = Tone.now();
         if (isPlaying) {
-            var seq = new Tone.Sequence(((time, note) => {
+            new Tone.Sequence(((time, note) => {
                 synth.triggerAttackRelease(note, "16n", time);
-            }), midiJson.tracks[0].notes.map(note => note.name), "4n");
-            seq.start(now)
+            }), midiJson.tracks[0].notes.map(note => note.name), "4n").start();
+            Tone.Transport.start();
         }
-        Tone.Transport.toggle(now);
+        else {
+            Tone.Transport.cancel(0);
+            Tone.Transport.stop();
+        }
     }, [isPlaying, midiJson, synth])
 }
