@@ -4,6 +4,7 @@ import { WideCard } from "../../components/Cards";
 
 import { wideCards } from '../../resources';
 
+// TODO: Review modal transportation
 
 export function Modos() {
     return(
