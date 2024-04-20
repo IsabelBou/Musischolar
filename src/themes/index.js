@@ -39,6 +39,18 @@ const customTheme = extendTheme(
                     color: mode("comp_pink.900", "comp_pink.50")(props),
                     fill: mode("comp_pink.900", "comp_pink.50")(props),
                     filter: mode("drop-shadow(0 0 6rem blueviolet)", "drop-shadow(0 0 6rem lavender)")(props),
+                },
+                '.notehead': {
+                    transitionDuration: '0.4s',
+                    transitionTimingFunction: "ease-in-out",
+                    _hover: {
+                        color: mode("comp_pink.900", "comp_pink.50")(props),
+                        fill: mode("comp_pink.900", "comp_pink.50")(props),
+                        filter: mode("drop-shadow(0 0 6rem blueviolet)", "drop-shadow(0 0 6rem lavender)")(props),
+                        
+                        
+                    }
+                    
                 }
             },
             "p": {

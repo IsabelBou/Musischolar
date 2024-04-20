@@ -14,10 +14,11 @@ export const Display = (props) => {
     const [ isPlaying, setIsPlaying ] = useState(false);
 
     //TODO: Allow Pause and Resumption with Toggler
+    //TODO: Highlight playing notes
 
     return (
         <Box>
-            <VerovioRenderer url = {score} setMidi= {setMidiString} />
+            <VerovioRenderer url = {score} setMidi = {setMidiString} />
             <TonePlayer midiJson = { midiJson } isPlaying = { isPlaying }/>
             <PlayPauseToggle onClick = {() => setIsPlaying(!isPlaying)} isPlaying = { isPlaying }/>
         </Box>

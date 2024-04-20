@@ -2,6 +2,8 @@ import { Box, Card, CardBody, CardHeader } from '@chakra-ui/react';
 import { AccordionButton, AccordionIcon, AccordionPanel, AccordionItem, Accordion } from '@chakra-ui/react';
 import { Display } from '../Music';
 
+//TODO: Enable description to be passed as another component
+
 export const CustomCard = (props) => {
     const { title, description, score } = props;
     return (
