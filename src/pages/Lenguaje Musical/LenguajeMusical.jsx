@@ -9,5 +9,5 @@ export function LenguajeMusical() {
             <br />
             <Link as = { ReactRouterLink } to = "Modos"> Modos </Link>
         </Box>
-    )       // TODO: Algorithm for page content mapping
+    )       // TODO: Algorithm for page content mapping, like Nav
 }

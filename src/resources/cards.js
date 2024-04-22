@@ -70,7 +70,7 @@ export const cards = {
                 score: scores.EQMODES.LIDIO,
             },
             MIXOLIDIO: {
-                title: 'T. menor + VII↓',
+                title: 'T. Mayor + VII↓',
                 description: 'Tonalidad Mayor con VII aumentado. Sol Mayor 🡆 1#',
                 score: scores.EQMODES.MIXOLIDIO,
             },

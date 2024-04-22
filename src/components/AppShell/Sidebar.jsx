@@ -20,7 +20,7 @@ export const Sidebar = (props) => {
         >
             <Flex height = "20" alignItems = "center" marginX = "8" justifyContent = "space-between">
                 <Text fontSize="xl" fontWeight="bold">
-                    Menu List from Sidebar
+                    Content
                 </Text>
                 <CloseButton display = {{ base: "flex", lg: "none" }} 
                     onClick = { onClose } />

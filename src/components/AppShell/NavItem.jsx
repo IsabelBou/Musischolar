@@ -9,10 +9,17 @@ export const NavItem = (props) => {
 
     return(
         <Box>
-            <Flex align = "center" p="2" mx="4" borderRadius = "md" cursor = "pointer"
-                _hover = {{ bg: `${bgColor}` }} >
-                <ChakraLink as = { ReactRouterLink } to = { `${ path }` }> { title } </ChakraLink>
-            </Flex>
+            <ChakraLink as = { ReactRouterLink } to = { `${ path }` }>
+                <Flex align = "center" p="2" mx="4" borderRadius = "md" cursor = "pointer"
+                    _hover = {
+                        { bg: `${bgColor}`,
+                        transitionDuration: '0.4s',
+                        transitionTimingFunction: "ease-in-out",
+                        }
+                    } >
+                    { title }
+                </Flex>
+            </ChakraLink>
         </Box>
     )
 }
