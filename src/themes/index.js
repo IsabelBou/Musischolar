@@ -14,8 +14,6 @@ import { headingTheme } from './heading'
 import { SimpleGrid } from '@chakra-ui/react'
 import '@fontsource/open-sans/500.css'
 
-// TODO: Customize scrollbars
-
 const customTheme = extendTheme(
 {
     styles: {
@@ -47,10 +45,7 @@ const customTheme = extendTheme(
                         color: mode("comp_pink.900", "comp_pink.50")(props),
                         fill: mode("comp_pink.900", "comp_pink.50")(props),
                         filter: mode("drop-shadow(0 0 6rem blueviolet)", "drop-shadow(0 0 6rem lavender)")(props),
-                        
-                        
                     }
-                    
                 }
             },
             "p": {
