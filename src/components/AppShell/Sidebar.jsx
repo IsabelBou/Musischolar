@@ -7,6 +7,9 @@ import {
 
 import { Nav } from "./Nav";
 
+// FIXME: on small screens drawer content now bleeds through overlay
+// TODO: Close sidebar upon clicking on a section 
+
 export const Sidebar = (props) => {
     const { onClose } = props;
 
