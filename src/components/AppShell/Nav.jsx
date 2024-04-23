@@ -5,6 +5,7 @@ import { NavItem } from "./NavItem";
 
 export function Nav() {
     const NavItems = ROUTES[0].children.map(({ path, title }) => {
+        if (path != '*')
         return <NavItem key = { title } path = { `${ path }` } title = { title }/>; 
     });
 

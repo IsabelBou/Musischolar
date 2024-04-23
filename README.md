@@ -36,7 +36,7 @@
 ## About The Project
 ReactJS app meant to store interactive conservatory notes using Chakra-UI. 
 The music sheets are rendered into SVG with Verovio using custom MEI files (XML-based music encoding).
-Verovio is also capable of producing MIDI files that are played using JZZ.js MIDI library.
+Verovio is also capable of producing MIDI files that are played using Tone.js.
 <br />
 <p align="center"><b>This is still a work in progress.</b></p>
 
