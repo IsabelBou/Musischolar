@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom"
 
 import { AppShell } from '../AppShell/AppShell'
 
-import { Home, LenguajeMusical, Armonia, Modos } from '../../pages'
+import { Home, LenguajeMusical, Armonia, Modos, Intervalos } from '../../pages'
 
 import { TestContent, TestError } from '../../pages'
 
@@ -32,6 +32,11 @@ export const ROUTES = [
                         path: "Modos",
                         element: <Modos />,
                         title: "Modos",
+                    },
+                    {
+                        path: "Intervalos",
+                        element: <Intervalos />,
+                        title: "Intervalos",
                     }
                 ]
             },
