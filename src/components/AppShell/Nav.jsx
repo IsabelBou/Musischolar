@@ -1,12 +1,20 @@
-import { ROUTES } from '../router/RouterConfig';
 import { NavItem } from "./NavItem";
+import NavAccordion from './NavAccordion';
 
-// FIXME: Recreate algorithm taking nested routes into account
-
-export function Nav() {
-    const NavItems = ROUTES[0].children.map(({ path, title }) => {
-        if (path != '*')
-        return <NavItem key = { title } path = { `${ path }` } title = { title }/>; 
+export function Nav(props) {
+    const { routes } = props;
+    const parentPath = routes.path;
+    const NavItems = routes.children.map(({ path, title, children }) => {
+        if (children){
+            return (
+            <NavAccordion key = { title } path = { `${ path }` } title = { title }>
+                <Nav routes = {{ path: parentPath + path, title, children }} />
+            </NavAccordion>)
+        }
+        else if (path != '' && path != '*') 
+            return (
+            <NavItem key = { title } path = { `${ parentPath + '/' + path }` } title = { title }/>
+        )
     });
 
     return (
