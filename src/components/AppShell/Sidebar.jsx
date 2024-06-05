@@ -6,9 +6,10 @@ import {
 } from "@chakra-ui/react";
 
 import { Nav } from "./Nav";
+import { ROUTES } from '../router/RouterConfig';
 
 // FIXME: on small screens drawer content now bleeds through overlay
-// TODO: Close sidebar upon clicking on a section 
+
 
 export const Sidebar = (props) => {
     const { onClose } = props;
@@ -28,7 +29,7 @@ export const Sidebar = (props) => {
                 <CloseButton display = {{ base: "flex", lg: "none" }} 
                     onClick = { onClose } />
             </Flex>
-            <Nav />
+            <Nav routes = {ROUTES[0]} />
         </Box>
     );
 };
