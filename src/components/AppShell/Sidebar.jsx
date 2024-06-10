@@ -17,16 +17,16 @@ export const Sidebar = (props) => {
     return (
         <Box
             transition="2s ease"
-            width = {{ base: "full", lg: 80 }}
+            width = {{ base: "xs", lg: 80 }}
             position = "fixed"
             height = "full"
             borderRightWidth = "1px"
         >
-            <Flex height = "20" alignItems = "center" marginX = "8" justifyContent = "space-between">
-                <Text fontSize="xl" fontWeight="bold">
+            <Flex height = "20"  justifyContent = "space-between">
+                <Text marginStart = "12" marginTop = "8" fontSize="2xl">
                     Content
                 </Text>
-                <CloseButton display = {{ base: "flex", lg: "none" }} 
+                <CloseButton display = {{ base: "flex", lg: "none" }} margin = "1"
                     onClick = { onClose } />
             </Flex>
             <Nav routes = {ROUTES[0]} />

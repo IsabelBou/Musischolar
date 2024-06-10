@@ -70,10 +70,10 @@ Verovio is also capable of producing MIDI files that are played using Tone.js.
   - [x] ~~Create global Dark/Light mode toggle~~
   - [x] ~~Create global tempo selector as slider~~
   - [x] ~~Create global tonality selector~~
-- [ ] **Navigation**
+- [x] **Navigation**
   - [x] ~~Responsive App Shell~~
   - [x] ~~Implement React Router~~
-  - [ ] Nested Routing algorithm
+  - [x] Nested Routing algorithm
 - [x] **Quality**
   - [x] ~~Grant responsiveness~~
   - [x] ~~Verify accessibility~~
