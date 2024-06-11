@@ -8,9 +8,6 @@ import {
 import { Nav } from "./Nav";
 import { ROUTES } from '../router/RouterConfig';
 
-// FIXME: on small screens drawer content now bleeds through overlay
-
-
 export const Sidebar = (props) => {
     const { onClose } = props;
 
