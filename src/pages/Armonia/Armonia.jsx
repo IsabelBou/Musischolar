@@ -9,5 +9,5 @@ export function Armonia() {
             <br />
             <Link as = { ReactRouterLink } to = "nested"> Nested Page </Link>
         </Box>
-    )       // TODO: Algorithm for page content mapping
+    )       
 }
