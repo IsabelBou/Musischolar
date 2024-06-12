@@ -2,8 +2,7 @@ import { Box, Card, CardBody, CardHeader } from '@chakra-ui/react';
 import { AccordionButton, AccordionIcon, AccordionPanel, AccordionItem, Accordion } from '@chakra-ui/react';
 import { Display } from '../Music';
 
-export const CustomCard = (props) => {
-    const { title, description, score } = props;
+export const CustomizableCard = ({title, score, children}) => {
     return (
         <Card variant='accordionSingle'>
             <CardHeader>
@@ -11,12 +10,12 @@ export const CustomCard = (props) => {
                     <AccordionItem border='none'>                  
                         <AccordionButton >
                             <Box flex='1' textAlign='center'>
-                                {title}
+                                { title }
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
                         <AccordionPanel>
-                            {description}
+                            { children }
                         </AccordionPanel>
                     </AccordionItem>
                 </Accordion>

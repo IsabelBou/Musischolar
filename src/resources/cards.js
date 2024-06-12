@@ -2,8 +2,6 @@ import { scores } from "./scores"
 
 // TODO: Alternate accessible titles and descriptions must be declared too
 
-// TODO: Enable listing option in CustomCard's accordion description
-
 export const cards = {
     TEMPLATE:{
         title: 'Title',
