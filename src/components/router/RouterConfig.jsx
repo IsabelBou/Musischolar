@@ -4,7 +4,7 @@ import { AppShell } from '../AppShell/AppShell'
 
 import { Home, LenguajeMusical, Armonia, Modos, Intervalos } from '../../pages'
 
-import { TestContent, TestError } from '../../pages'
+import { TestContent, Error } from '../../pages'
 
 export const ROUTES = [
     {
@@ -60,7 +60,7 @@ export const ROUTES = [
             },
             {
                 path: "*",
-                element: <TestError />,
+                element: <Error />,
                 title: "error"
             }
         ]
