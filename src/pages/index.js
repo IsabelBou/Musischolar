@@ -1,6 +1,6 @@
 import { Home } from "./Home"
 import { TestContent } from "./TestContent"
-import { TestError } from "./TestError"
+import { Error } from "./Error"
 
 import { LenguajeMusical } from "./Lenguaje Musical/LenguajeMusical"
 import { Modos } from './Lenguaje Musical/Modos'
@@ -12,4 +12,4 @@ export { Home }
 export { LenguajeMusical, Modos, Intervalos}
 export { Armonia }
 
-export { TestContent, TestError }
+export { TestContent, Error }
