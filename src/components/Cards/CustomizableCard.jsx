@@ -2,6 +2,8 @@ import { Box, Card, CardBody, CardHeader } from '@chakra-ui/react';
 import { AccordionButton, AccordionIcon, AccordionPanel, AccordionItem, Accordion } from '@chakra-ui/react';
 import { Display } from '../Music';
 
+// TODO: Unify with previous version of card with optional description props
+
 export const CustomizableCard = ({title, score, children}) => {
     return (
         <Card variant='accordionSingle'>

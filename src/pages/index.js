@@ -8,8 +8,8 @@ import { Intervalos } from "./Lenguaje Musical/Intervalos"
 
 import { Armonia } from './Armonia/Armonia'
 
-export { Home }
+export { Home, Error }
 export { LenguajeMusical, Modos, Intervalos}
 export { Armonia }
 
-export { TestContent, Error }
+export { TestContent }
