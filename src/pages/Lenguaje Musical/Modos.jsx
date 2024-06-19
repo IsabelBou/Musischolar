@@ -5,6 +5,7 @@ import { WideCard } from "../../components/Cards";
 import { wideCards } from '../../resources';
 
 // TODO: Review modal transportation
+// TODO: Redo page with CustomizableCard and directly add information in page instead of referencing resources data (except for scores)
 
 export function Modos() {
     return(

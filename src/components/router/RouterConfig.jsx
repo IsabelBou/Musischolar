@@ -2,9 +2,7 @@ import { Outlet } from "react-router-dom"
 
 import { AppShell } from '../AppShell/AppShell'
 
-import { Home, LenguajeMusical, Armonia, Modos, Intervalos } from '../../pages'
-
-import { TestContent, Error } from '../../pages'
+import { Home, LenguajeMusical, Armonia, Modos, Intervalos, Error } from '../../pages'
 
 export const ROUTES = [
     {
@@ -43,18 +41,13 @@ export const ROUTES = [
             {
                 path: "Armonia",
                 element: <Outlet />,
-                title: "Armonia",
+                title: "Armonía",
                 children: [
                     {
                         path: '',
                         index: true,
                         element: <Armonia />,
-                        title: "Armonia",
-                    },
-                    {
-                        path: "Nested",
-                        element: <TestContent />,
-                        title: "Nesting Test",
+                        title: "Armonía",
                     }
                 ]
             },
