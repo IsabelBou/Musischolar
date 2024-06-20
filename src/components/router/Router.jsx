@@ -23,6 +23,9 @@ const renderRoutes = (ROUTES) => {
 const Router = 
     createBrowserRouter(
         createRoutesFromElements(
-            renderRoutes(ROUTES)));
+            renderRoutes(ROUTES)), 
+        {
+            basename: "/Musischolar",
+        });
 
 export default Router;
