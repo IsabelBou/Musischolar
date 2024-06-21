@@ -1,7 +1,7 @@
 {
   "name": "musischolar",
   "private": true,
-  "version": "0.0.2",
+  "version": "1.0.0",
   "type": "module",
   "homepage": "https://isabelbou.github.io/Musischolar/",
   "scripts": {

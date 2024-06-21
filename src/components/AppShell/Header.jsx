@@ -16,7 +16,7 @@ export const Header = (props) => {
             alignItems = "center"
             justifyContent = "space-between">
             <MenuButton onOpen = { onOpen } />
-            <Heading>
+            <Heading size={{ base: "md", md: "lg", lg: "xl" }}>
                 <Link as = { ReactRouterLink } to = "/">
                     Musischolar
                 </Link>
