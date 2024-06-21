@@ -1,17 +1,15 @@
 import { Card, CardHeader } from '@chakra-ui/react';
-import { CustomCard } from './index.js';
 import { SimpleGrid } from '@chakra-ui/react';
 
-export const WideCard = (props) => {
-    const { title, right, left } = props;
+export const WideCard = ({title, children}) => {
     return (
         <Card variant='group'>
             <CardHeader>
                 {title}
             </CardHeader>
             <SimpleGrid>
-                <CustomCard { ...left } />
-                <CustomCard { ...right } />
+                { children [0] }
+                { children [1] }
             </SimpleGrid>
         </Card>
     )

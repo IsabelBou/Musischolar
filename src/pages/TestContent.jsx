@@ -1,26 +1,47 @@
 import { SimpleGrid, Card, CardHeader, CardBody, Box } from '@chakra-ui/react'
-import { CustomCard, WideCard, ParallelCards, CustomizableCard } from '../components/Cards';
+import { CustomCard, WideCard, ParallelCards } from '../components/Cards';
 import { singleCards, wideCards, parallelCards } from '../resources';
 
 import { List, ListItem, ListIcon } from '@chakra-ui/react';
-import { FaRegArrowAltCircleUp as Up, FaRegArrowAltCircleDown  } from "react-icons/fa";
+
+{/* Iconos */}
+import { FaRegArrowAltCircleUp as Up, FaRegArrowAltCircleDown as Down } from "react-icons/fa";
+import { MdOutlineStart as Start, MdOutlinePiano as Piano } from "react-icons/md";
+import { IoMdKey as Key } from "react-icons/io";
+import { PiWavesBold as Approx } from "react-icons/pi";
 
 export function TestContent() {
     return (
         <Box> 
             {/* Cards with JSX in description */}
-            <CustomizableCard {...singleCards.TEMPLATE}>
+            <CustomCard {...singleCards.TEMPLATE}>
                 <List>
-                    <ListItem display="flex" justifyContent = "center" alignItems = "center">
+                    <ListItem>
                         <ListIcon as = { Up } color='comp_green.600' />
-                        Listed Item 1
+                        Alteración Ascendente
                     </ListItem>
                     <ListItem>
-                        <ListIcon as = { FaRegArrowAltCircleDown } color='triad_orange.600' />
-                        Listed Item 2
+                        <ListIcon as = { Down } color='triad_orange.600' />
+                        Alteración Descendente
+                    </ListItem>
+                    <ListItem>
+                        <ListIcon as = { Start } color="teal.400"/>
+                        Nota inicial
+                    </ListItem>
+                    <ListItem>
+                        <ListIcon as = { Piano } color="gray.500"/>
+                        Equivalencia Tonal
+                    </ListItem>
+                    <ListItem>
+                        <ListIcon as = { Key } color="yellow.500"/>
+                        Armadura de la equivalencia
+                    </ListItem>
+                    <ListItem>
+                        <ListIcon as = { Approx } color="gray.400" />
+                        Aproximación
                     </ListItem>
                 </List>
-            </CustomizableCard>
+            </CustomCard>
             
             {/* Composite Cards */}
             <Card variant='double'>
