@@ -5,7 +5,8 @@ export const PlayPauseToggle = (props) => {
     const { onClick, isPlaying } = props;
     return (
         <div>
-            <Button aria-label = "Toggle Play or Pause"
+            <Button p="2" mt="3"
+            aria-label = "Toggle Play or Pause"
             onClick = { onClick } >
                 { isPlaying ? <PiPauseDuotone/> : <PiPlayDuotone/> }
             </Button>
