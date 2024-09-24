@@ -1,5 +1,8 @@
 import { useEffect  } from 'react';
 import * as Tone from 'tone';
+import { useContext } from "react";
+import { TempoContext } from '../../context';
+
 const synth = new Tone.Sampler({
     urls: {
 					C4: "C4.mp3",
@@ -18,18 +21,20 @@ const synth = new Tone.Sampler({
 
 export const TonePlayer = (props) => {
     const { midiJson, isPlaying} = props;
+    const { tempo } = useContext(TempoContext);
 
     useEffect( () => {
         if (isPlaying) {
             Tone.start();
-            new Tone.Sequence(((time, note) => {
-                synth.triggerAttackRelease(note, "16n", time);
+            const part = new Tone.Sequence(((time, note) => {
+                synth.triggerAttackRelease(note, "4n", time);
             }), midiJson.tracks[0].notes.map(note => note.name), "4n").start();
+            part.playbackRate = tempo;
             Tone.Transport.start();
         }
         else {
             Tone.Transport.cancel(0);
             Tone.Transport.stop();
         }
-    }, [isPlaying, midiJson])
+    }, [isPlaying, midiJson, tempo])
 }
