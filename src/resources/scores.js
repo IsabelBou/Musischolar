@@ -17,4 +17,7 @@ export const scores = {
         EOLICO:     'https://raw.githubusercontent.com/IsabelBou/MusischolarMeiFiles/main/Lenguaje%20Musical/Modos/Equivalentes%20tonales/EqEolico.mei',
         LOCRIO:     'https://raw.githubusercontent.com/IsabelBou/MusischolarMeiFiles/main/Lenguaje%20Musical/Modos/Equivalentes%20tonales/EqLocrio.mei',
     },
+    QUALITY: {
+        MAJOR:      'https://raw.githubusercontent.com/IsabelBou/MusischolarMeiFiles/main/Lenguaje%20Musical/Especie/AcordesMayor.mei',
+    },
 }
