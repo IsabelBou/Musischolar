@@ -1,4 +1,4 @@
-import { Box, Heading } from "@chakra-ui/layout";
+import { Box, Heading } from "@chakra-ui/react";
 import { List, ListItem, ListIcon } from '@chakra-ui/react';
 
 import { CustomCard } from "../../components/Cards";
