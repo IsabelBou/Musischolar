@@ -1,4 +1,4 @@
-import { SimpleGrid , Heading, Text } from "@chakra-ui/layout";
+import { SimpleGrid , Heading, Text } from "@chakra-ui/react";
 
 export function Error() {
     return(

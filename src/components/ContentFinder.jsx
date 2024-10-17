@@ -1,7 +1,6 @@
 import { Link as ReactRouterLink } from 'react-router-dom'
 import { Link } from "@chakra-ui/react";
-import { Box, Heading, } from "@chakra-ui/layout";
-import { SimpleGrid } from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import { ROUTES } from './router/RouterConfig';
 
 
